@@ -1,0 +1,57 @@
+knowledge_sources:
+- knowledge/INDEX.md
+- knowledge/assistant/ANOMALY_UNSUPERVISED.md
+- knowledge/assistant/CAMERA_ACQUISITION.md
+- knowledge/assistant/CONTEXT_CODE_GLOBALDATA.md
+- knowledge/assistant/CROSS_PEKAT_403.md
+- knowledge/assistant/DATA_MODEL_PORTABILITY.md
+- knowledge/assistant/DETECTOR_ANNOTATION_403.md
+- knowledge/assistant/DETECTOR_CLASSIFIER_OCR.md
+- knowledge/assistant/EXTERNAL_TEACHER_DETECTOR_BOOTSTRAP_403.md
+- knowledge/assistant/EXTERNAL_TORCHVISION_PTOOL_403.md
+- knowledge/assistant/FLOW_AUTHORING.md
+- knowledge/assistant/HTTP_OUTPUT_403.md
+- knowledge/assistant/LOG_DIAGNOSTICS.md
+- knowledge/assistant/MODERNIZATION_ADVISOR.md
+- knowledge/assistant/OCR_ANNOTATION.md
+- knowledge/assistant/PEKAT_VERSION_CAPABILITY_DELTA.md
+- knowledge/assistant/PROJECTS_OPERATOR_STATISTICS.md
+- knowledge/assistant/PROJECT_ANALYSIS.md
+- knowledge/assistant/PTOOL_PMODULE_FORM.md
+- knowledge/assistant/REST_SDK_CROSS_PEKAT.md
+- knowledge/assistant/RUNTIME_PYTHON_ML.md
+- knowledge/assistant/SEMANTIC_PROJECT_DIFF.md
+- knowledge/assistant/SUPERVISED_MASK_LIFECYCLE.md
+- knowledge/assistant/TRAINING_HISTORY_DIAGNOSTICS.md
+- knowledge/assistant/TROUBLESHOOTING.md
+- knowledge/assistant/VERSION_ROUTING.md
+- knowledge/assistant/VISION_DESIGN.md
+- knowledge/bridges/BASLER_PEKAT_BRIDGE.md
+- knowledge/bridges/IFM_IOLINK_PEKAT_BRIDGE.md
+- knowledge/bridges/KEYENCE_LJX_PEKAT_BRIDGE.md
+- knowledge/bridges/MX_G2000_OPERATIONAL_ROUTE.md
+- docs/ARCHITECTURE.md
+- docs/CAPABILITIES.md
+- docs/EVIDENCE_MODEL.md
+- docs/VERSION_SUPPORT.md
+- docs/USER_SCENARIOS.md
+- docs/SPECIALIST_SKILLS.md
+schema: pekat-public-package/1
+validation:
+  blocked_identity_hashes:
+  - 0c24c923ffceb4bb91c9b67032c3cd7cf1fb3a3d2357bba7f25a5e3670132b74
+  - 1607c4cfaddda8c33c2fbb4910983ddb6a95a3ccbe4f0590fe4e8be488cc4444
+  - 22c9d49cdc49a44a216ab219e6c53940411337a7ad9af791a8021a7fa2d05f3e
+  - 24c83c5f3424374de655ab2fd81106b0b25563aff9102a700bcbd83d95b9a09f
+  - 85687051228b1e6b54e5d30148b6f289f4b26e0df4d6f77826c0998d4bb9dc2b
+  - 9c4569379694d6a1265f6ef7b0e994b4a50e2a77c64c16d28134196c46fe5df8
+  - ac68f2503868ec5b6effc944d29f89e4af6579f3f4d55aee874fa5da37324326
+  - b62c7bf859afd04e82e9d899af5dfba54880b491958ab01347faf2c0d21e5bb3
+  - bbc0f310855e4cbc5015b5083f7f2847c6a97d4f23934c980d0c532156474464
+  - bcf81b359d26cdffdaf486cc87a1472353c695b79271ffaa8d06b66812fe3e07
+  - fff9cb9dcc3ac735fc25a59f424e98278a731c23ccd57276d292996c2ba7784f
+  public_github_repositories:
+  - CZPavel/PEKAT-Assistant
+  - CZPavel/codex-skill-basler-cameras
+  - CZPavel/codex-skill-ifm-io-link
+  - CZPavel/keyence-ljx-s-skill

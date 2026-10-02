@@ -1,9 +1,8 @@
-"""Offline public-release gates. Reject unsafe files, identities and package drift."""
+"""Offline public-release gates. Reject unsafe files and package drift."""
 from __future__ import annotations
 
 import argparse
 import ast
-import hashlib
 import io
 import json
 import os
@@ -16,17 +15,23 @@ from urllib.parse import unquote, urlparse
 
 import yaml
 
-from build_packages import ROOT, INVENTORY, EXCLUDED_PARTS, build, files
+from build_packages import ROOT, EXCLUDED_PARTS, build, files
 
-REQUIRED = ["README.md", "LICENSE", "DISCLAIMER.md", "SECURITY.md", "CONTRIBUTING.md",
-            "THIRD_PARTY_NOTICES.md", "CHANGELOG.md", "knowledge/INDEX.md",
-            "docs/ARCHITECTURE.md", "docs/GETTING_STARTED.md", "docs/USER_SCENARIOS.md",
-            "docs/CAPABILITIES.md", "docs/EVIDENCE_MODEL.md", "docs/VERSION_SUPPORT.md",
-            "docs/SPECIALIST_SKILLS.md", "docs/PUBLICATION_MODEL.md",
-            ".github/skills/pekat-assistant/SKILL.md", "gpt/README.md",
-            "gpt/BUILDER_INSTRUCTIONS.md", "gpt/KNOWLEDGE_MANIFEST.yaml",
-            "scripts/build_packages.py", ".github/workflows/validate-public.yml",
-            "requirements-dev.txt", "public-package.yaml", INVENTORY]
+REQUIRED = [
+    "README.md", "LICENSE", "DISCLAIMER.md", "SECURITY.md", "CONTRIBUTING.md",
+    "THIRD_PARTY_NOTICES.md", "CHANGELOG.md", "knowledge/INDEX.md",
+    "docs/ARCHITECTURE.md", "docs/GETTING_STARTED.md", "docs/USER_SCENARIOS.md",
+    "docs/USER_SCENARIOS_EXTENDED.md", "docs/CAPABILITIES.md", "docs/EVIDENCE_MODEL.md",
+    "docs/EVIDENCE_AND_VALIDATION_STATUS.md", "docs/VERSION_SUPPORT.md", "docs/VERSION_MATRIX.md",
+    "docs/SPECIALIST_SKILLS.md", "docs/SPECIALIST_SKILL_STATUS.md",
+    "docs/PRACTICAL_RUNTIME_RULES.md", "docs/VALIDATION.md", "docs/PUBLICATION_MODEL.md",
+    ".github/skills/pekat-assistant/SKILL.md", "gpt/README.md",
+    "gpt/BUILDER_INSTRUCTIONS.md", "gpt/KNOWLEDGE_MANIFEST.yaml",
+    "benchmarks/assistant_behavior_v0_2.yaml",
+    "scripts/build_packages.py", "scripts/build_release_artifacts.py",
+    ".github/workflows/validate-public.yml", ".github/workflows/release-public.yml",
+    "requirements-dev.txt", "public-package.yaml"
+]
 EXTENSIONS = {".md", ".yaml", ".yml", ".json", ".py", ".txt"}
 SPECIAL_FILES = {"LICENSE", ".gitignore", ".gitattributes"}
 PATTERNS = {
@@ -36,7 +41,7 @@ PATTERNS = {
     "private key": r"-----BEGIN (?:[A-Z]+ )?PRIVATE KEY-----",
     "GitHub token": r"\bgh[pousr]_[A-Za-z0-9]{20,}\b|\bgithub_pat_[A-Za-z0-9_]{20,}\b",
     "API token": r"\bsk-(?:proj-)?[A-Za-z0-9_-]{20,}\b|\bAKIA[A-Z0-9]{16}\b",
-    "credential assignment": r'''(?i)(?:password|passwd|api[_-]?key|(?:auth|access)[_-]?token|(?:client[_-]?)?secret|license[_-]?key)["']?[ \t]*[=:][ \t]*(?:"[^"\r\n]{8,}"|'[^'\r\n]{8,}'|[^\s"'`,;]{8,})''',
+    "credential assignment": r'''(?i)(?:password|passwd|api[_-]?key|(?:auth|access)[_-]?token|(?:client[_-]?)?secret|license[_-]?key)["']?[ \t]*[=:][ \t]*(?:"[^"\r\n]{8,}"|'[^'\r\n]{8,}'|[^\s"';,]{8,})''',
     "bearer credential": r"(?i)\bBearer\s+[A-Za-z0-9._/-]{16,}",
     "JWT credential": r"\beyJ[A-Za-z0-9_-]{10,}\.[A-Za-z0-9_-]{10,}\.[A-Za-z0-9_-]{10,}\b",
     "network identity": r"(?i)\b(?:\d{1,3}\.){3}\d{1,3}\b|\bhttps?://[^/\s]+\.(?:local|internal|corp)\b",
@@ -44,23 +49,22 @@ PATTERNS = {
     "test-project identity": r"(?i)\bAUTO_TEST_FOR_[A-Z0-9_]+\b",
     "private transport": r"(?i)\bset_" r"store\b|\bsocket\.io\b|\bimage" r"Rectangles\b|\bcodeItems\.db\b",
 }
-FORBIDDEN_NAMES = re.compile(r"(?i)(?:PRE_" r"A4|FORENSIC|pekat_gui_api_(?:catalog|coverage)|browser[-_](?:dump|state|trace)|network[-_]trace|frontend[-_]bundle|\.min\.js$|(?:^|/)(?:auth\.json|cookies(?:\.json)?|credentials[^/]*|\.env(?:\.[^/]*)?)$)")
+FORBIDDEN_NAMES = re.compile(
+    r"(?i)(?:PRE_" r"A4|FORENSIC|pekat_gui_api_(?:catalog|coverage)|browser[-_](?:dump|state|trace)|"
+    r"network[-_]trace|frontend[-_]bundle|\.min\.js$|(?:^|/)(?:auth\.json|cookies(?:\.json)?|credentials[^/]*|\.env(?:\.[^/]*)?)$)"
+)
 
 
 def text_issues(text: str, policy: dict) -> list[str]:
     issues = [name for name, pattern in PATTERNS.items() if re.search(pattern, text)]
-    tokens = re.findall(r"[\w]+", text.casefold())
-    identities = set(policy.get("blocked_identity_hashes", []))
-    if any(hashlib.sha256(token.encode()).hexdigest() in identities for token in tokens):
-        issues.append("restricted source identity")
-    for target in re.findall(r"https?://[^\s<>\)\]`\"']+", text):
+    for target in re.findall(r"https?://[^\s<>\)\]\"']+", text):
         parsed = urlparse(target)
         if parsed.username or parsed.password:
             issues.append("URL credentials")
         if (parsed.hostname or "").casefold().removeprefix("www.") == "github.com":
             parts = parsed.path.strip("/").split("/")
-            if len(parts) < 2 or "/".join(parts[:2]).casefold() not in {
-                repo.casefold() for repo in policy["public_github_repositories"]}:
+            allowed = {repo.casefold() for repo in policy["public_github_repositories"]}
+            if len(parts) < 2 or "/".join(parts[:2]).casefold() not in allowed:
                 issues.append("unapproved GitHub repository")
     return sorted(set(issues))
 
@@ -84,11 +88,13 @@ def index_issues(root: Path, policy: dict) -> list[str]:
         entries.append((rel, oid))
     if not entries:
         return issues + ["index: no staged public files"]
-    if {rel for rel, _ in entries} != {p.relative_to(root).as_posix() for p in files(root)}:
-        issues.append("index/worktree file set mismatch")
-    blobs = subprocess.run(["git", "-C", str(root), "cat-file", "--batch"],
-                           input="".join(oid + "\n" for _, oid in entries).encode("ascii"),
-                           stdout=subprocess.PIPE, check=True).stdout
+
+    blobs = subprocess.run(
+        ["git", "-C", str(root), "cat-file", "--batch"],
+        input="".join(oid + "\n" for _, oid in entries).encode("ascii"),
+        stdout=subprocess.PIPE,
+        check=True,
+    ).stdout
     stream = io.BytesIO(blobs)
     for rel, oid in entries:
         header = stream.readline().decode("ascii").split()
@@ -117,12 +123,35 @@ def link_issues(root: Path, path: Path, text: str) -> list[str]:
         resolved = (path.parent / clean).resolve()
         if not resolved.is_relative_to(root.resolve()) or not resolved.exists():
             issues.append("broken/outside link: " + target)
-    # Reference-style definitions are checked as links too.
     for target in re.findall(r"(?m)^\[[^\]]+\]:\s+(\S+)", text):
         if not re.match(r"[a-zA-Z]+:|#", target):
             resolved = (path.parent / unquote(target.split("#")[0])).resolve()
             if not resolved.is_relative_to(root.resolve()) or not resolved.exists():
                 issues.append("broken reference link: " + target)
+    return issues
+
+
+def benchmark_issues(root: Path) -> list[str]:
+    path = root / "benchmarks/assistant_behavior_v0_2.yaml"
+    try:
+        data = yaml.safe_load(path.read_text(encoding="utf-8"))
+        cases = data["cases"]
+    except (OSError, KeyError, TypeError, yaml.YAMLError) as exc:
+        return ["benchmark: invalid: " + str(exc)]
+    issues = []
+    ids = []
+    for case in cases:
+        if not isinstance(case, dict):
+            issues.append("benchmark: case is not a mapping")
+            continue
+        missing = {"id", "prompt", "must", "must_not"} - set(case)
+        if missing:
+            issues.append("benchmark: missing fields: " + ",".join(sorted(missing)))
+        ids.append(case.get("id"))
+        if not case.get("must") or not case.get("must_not"):
+            issues.append("benchmark: empty expectation list")
+    if len(ids) != len(set(ids)):
+        issues.append("benchmark: duplicate id")
     return issues
 
 
@@ -133,30 +162,28 @@ def validate(root: Path = ROOT, check_index: bool = False) -> list[str]:
             errors.append("missing: " + name)
     if errors:
         return errors
+
     try:
         config = yaml.safe_load((root / "public-package.yaml").read_text(encoding="utf-8"))
         policy = config["validation"]
-        inventory = yaml.safe_load((root / INVENTORY).read_text(encoding="utf-8"))
-        records = inventory["files"]
-        listed = {item["path"] for item in records}
-        if len(listed) != len(records):
-            errors.append("duplicate manifest path")
     except (ValueError, KeyError, TypeError, yaml.YAMLError) as exc:
         return ["invalid release metadata: " + str(exc)]
+
     try:
         paths = files(root)
     except ValueError as exc:
         return ["filesystem boundary: " + str(exc)]
-    actual = {p.relative_to(root).as_posix() for p in paths} - {INVENTORY}
-    if listed != actual:
-        errors.append("manifest file set mismatch")
+
     for p in root.rglob("*"):
         if any(x in EXCLUDED_PARTS for x in p.relative_to(root).parts):
             continue
         attributes = os.lstat(p)
-        if stat.S_ISLNK(attributes.st_mode) or bool(getattr(attributes, "st_file_attributes", 0)
-                                                   & getattr(stat, "FILE_ATTRIBUTE_REPARSE_POINT", 0)):
+        if stat.S_ISLNK(attributes.st_mode) or bool(
+            getattr(attributes, "st_file_attributes", 0)
+            & getattr(stat, "FILE_ATTRIBUTE_REPARSE_POINT", 0)
+        ):
             errors.append("link/junction forbidden: " + p.relative_to(root).as_posix())
+
     for path in paths:
         rel = path.relative_to(root).as_posix()
         if path.suffix not in EXTENSIONS and rel not in SPECIAL_FILES:
@@ -182,12 +209,8 @@ def validate(root: Path = ROOT, check_index: bool = False) -> list[str]:
                 errors.extend(rel + ": " + issue for issue in link_issues(root, path, text))
         except (ValueError, IndexError, AttributeError, SyntaxError, UnicodeError, yaml.YAMLError) as exc:
             errors.append(rel + ": invalid syntax/text: " + str(exc))
-    for record in records:
-        path = (root / record["path"]).resolve()
-        if not path.is_relative_to(root.resolve()) or not path.is_file():
-            errors.append("invalid manifest path")
-        elif hashlib.sha256(path.read_bytes()).hexdigest() != record["sha256"]:
-            errors.append(record["path"] + ": content hash mismatch")
+
+    errors.extend(benchmark_issues(root))
     try:
         errors.extend("generated drift: " + name for name in build(root, check=True))
     except (ValueError, KeyError, OSError, yaml.YAMLError) as exc:
@@ -206,4 +229,4 @@ if __name__ == "__main__":
     if failures:
         print("\n".join(failures))
         sys.exit(1)
-    print("PASS: structure, syntax, references, sensitive/secret scan, inventory and generated drift")
+    print("PASS: structure, syntax, references, sensitive/secret scan, benchmark schema and generated drift")

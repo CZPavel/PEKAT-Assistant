@@ -1,20 +1,31 @@
 # Publication model
 
-Public content is a curated derivative of a separately maintained canonical knowledge base. A canonical exporter selects approved rewritten material and keeps source provenance private. Private paths, customer evidence, proprietary contracts and runtime artifacts stay outside the release.
+Public content is a curated derivative of a separately maintained private development project. Publication uses an allowlist/rewrite model rather than copying a private tree and trying to blacklist sensitive files afterward.
 
-Install development dependencies from `requirements-dev.txt`, then run:
+Private paths, customer evidence, proprietary contracts, runtime artifacts and raw forensic material stay outside the release.
 
-```text
-python scripts/build_packages.py
-python scripts/validate_public.py
-python -m unittest discover -s tests
-```
+## Public repository validation
 
-The build creates standalone skill references and GPT knowledge. Validation checks public-content boundaries and the generated SHA manifest; it does not verify PEKAT runtime behavior.
+Run:
 
-Publish the validated output after reviewing the diff and notices. Regenerate package files from maintained public sources rather than editing them independently.
+    python scripts/build_packages.py --check
+    python scripts/validate_public.py
+    python -m unittest discover -s tests
 
-After staging the reviewed files with Git, run `python scripts/validate_public.py --index`
-to scan the exact publication blobs and confirm that the index matches the public
-worktree. CI also performs this check. Ordinary worktree validation can run before
-staging; neither validator pushes or changes Git state.
+After staging reviewed files with Git, run:
+
+    python scripts/validate_public.py --index
+
+The public validator intentionally contains only generic detection rules. Customer/project-specific deny lists belong to the private publication layer and are not published as hashes or reversible clues.
+
+## Generated packages
+
+Standalone skill references and the committed GPT aggregate are generated from approved public knowledge sources. Edit maintained public sources, not generated copies.
+
+Release packaging is separate and pins links to the supplied release ref.
+
+## Source-of-truth boundary
+
+The private development repository remains authoritative for implementation/runtime evidence. This public repository is authoritative for the public sanitized edition.
+
+A public update should inspect the private checkpoint, classify changes, update maintained public sources, validate generated packages and publication gates, review the diff, then merge and tag a release.

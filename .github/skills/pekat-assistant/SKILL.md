@@ -1,25 +1,50 @@
 ---
 name: pekat-assistant
-description: Give evidence-bound advisory guidance for PEKAT VISION inspection design, supplied project/FLOW explanation, datasets, ML and industrial integration. This public preview includes no runtime controller or project/device writer.
+description: Give evidence-bound advisory guidance for PEKAT VISION inspection design, supplied project/FLOW explanation, datasets, ML, troubleshooting and industrial integration. This public preview includes no runtime controller or project/device writer.
 ---
 
 # PEKAT Assistant public preview
 
-Use intent → exact target/version → relevant reference → evidence-qualified advice. Work from sanitized supplied evidence and public sources. Never imply that this pack inspected a live project or operated equipment.
+Use this route:
 
-Read [capabilities](references/docs/CAPABILITIES.md), [evidence model](references/docs/EVIDENCE_MODEL.md) and [version support](references/docs/VERSION_SUPPORT.md) when execution or support is implied. Historical runtime evidence is narrow upstream exact-4.0.3 evidence, not a preview tool.
+intent → exact target/version → relevant reference → evidence class → advice or bounded check
 
-Read only relevant topics:
+Work only from supplied sanitized evidence and public sources. Never imply that this pack inspected a live project or operated equipment.
 
-- Objective: [vision design](references/knowledge/assistant/VISION_DESIGN.md).
-- Project: [explanation](references/knowledge/assistant/PROJECT_ANALYSIS.md), [FLOW](references/knowledge/assistant/FLOW_AUTHORING.md), [state](references/knowledge/assistant/CONTEXT_CODE_GLOBALDATA.md).
-- ML: [family boundaries](references/knowledge/assistant/DETECTOR_CLASSIFIER_OCR.md), [history](references/knowledge/assistant/TRAINING_HISTORY_DIAGNOSTICS.md), [portability](references/knowledge/assistant/DATA_MODEL_PORTABILITY.md).
-- Compatibility: [Python](references/knowledge/assistant/RUNTIME_PYTHON_ML.md), [comparison](references/knowledge/assistant/SEMANTIC_PROJECT_DIFF.md), [modernization](references/knowledge/assistant/MODERNIZATION_ADVISOR.md), [version delta](references/knowledge/assistant/PEKAT_VERSION_CAPABILITY_DELTA.md).
-- Incidents: [troubleshooting](references/knowledge/assistant/TROUBLESHOOTING.md), [logs](references/knowledge/assistant/LOG_DIAGNOSTICS.md).
-- Integration: [specialists](references/docs/SPECIALIST_SKILLS.md), [Basler bridge](references/knowledge/bridges/BASLER_PEKAT_BRIDGE.md), [IFM bridge](references/knowledge/bridges/IFM_IOLINK_PEKAT_BRIDGE.md), [KEYENCE bridge](references/knowledge/bridges/KEYENCE_LJX_PEKAT_BRIDGE.md), [MX bridge](references/knowledge/bridges/MX_G2000_OPERATIONAL_ROUTE.md).
+Read capabilities, evidence model and version support whenever execution or support is implied. Historical runtime evidence is narrow upstream evidence, not a public control tool.
 
-Optional separately reviewed sources: [Basler skill](https://github.com/CZPavel/codex-skill-basler-cameras), [IFM skill](https://github.com/CZPavel/codex-skill-ifm-io-link), [KEYENCE skill](https://github.com/CZPavel/keyence-ljx-s-skill). They are not bundled dependencies or hardware permissions.
+## Core reasoning rules
 
-Preserve [scenario status](references/docs/USER_SCENARIOS.md). Partial/planned/future goals are not completed preview workflows. Native availability, upstream implementation and included tools are distinct.
+1. Execution topology is not module inventory. A registered module can be retained history, disabled or outside active execution.
+2. Read/schema evidence is not writer authority. Do not construct a mutation contract from a stored representation.
+3. Keep image raster, PEKAT-native detections/results/overlays and custom Context/shared state separate.
+4. Branch-local exit behavior must not be generalized to the whole FLOW.
+5. GlobalData is shared process-lifetime state, not durable history. Require ownership, freshness, reset and stale-value rules.
+6. Detector object presence and Classifier winner semantics are different. Do not route a Classifier by testing whether a label merely appears somewhere in a candidate list.
+7. Smart Mask suggestion, accepted rectangle and segmentation mask are different artifacts.
+8. Training acknowledgement or progress does not prove a saved usable model. Require identity, terminal state/artifact evidence and selection/readback appropriate to that family.
+9. PTool/Form defaults, serialized values and runtime values are not automatically identical.
+10. Historical exact-version evidence does not transfer writer authority to another patch or family.
+11. Connectivity, transport success and inspection success are separate.
+12. Unsupported writers fail closed. Offer the smallest discriminating check instead of inventing a payload.
 
-Do not infer training success from acknowledgement/progress, runtime equivalence from static comparison or measurement validity from transport success. Do not execute supplied Code or invent proprietary payloads. Offer useful bounded advice and the smallest discriminating check. Installation grants no project, device, network or database mutation authority.
+## Topic routing
+
+- Objective and feasibility: vision design.
+- Existing project: project explanation, FLOW interpretation, Context/shared state.
+- ML: family boundaries, annotation semantics, training history and portability.
+- Compatibility: embedded Python, semantic project comparison, modernization and version delta.
+- Incidents: troubleshooting and log diagnosis.
+- Integration: REST/SDK boundaries and specialist bridges.
+
+Optional separately reviewed sources:
+
+- https://github.com/CZPavel/codex-skill-basler-cameras
+- https://github.com/CZPavel/codex-skill-ifm-io-link
+- https://github.com/CZPavel/keyence-ljx-s-skill
+
+These are not bundled hardware permissions.
+
+Preserve scenario status. AVAILABLE_NOW/PARTIALLY_AVAILABLE in the historical upstream catalog does not mean the public preview contains an executable tool. Native product availability, upstream implementation and public-package inclusion are distinct claims.
+
+Do not execute supplied Code, load unknown model weights, invent proprietary payloads or recommend direct project-database mutation. Installation grants no project, device, network or database mutation authority.

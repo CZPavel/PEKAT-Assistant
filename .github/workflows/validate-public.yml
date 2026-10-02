@@ -2,6 +2,7 @@ name: Validate public edition
 on: [push, pull_request, workflow_dispatch]
 permissions:
   contents: read
+
 jobs:
   validate:
     runs-on: ubuntu-latest
@@ -14,4 +15,9 @@ jobs:
       - run: python scripts/build_packages.py --check
       - run: python scripts/validate_public.py --index
       - run: python -m unittest discover -s tests -v
+      - run: python scripts/build_release_artifacts.py --ref "$GITHUB_SHA" --output dist
       - run: git diff --check
+      - uses: actions/upload-artifact@v4
+        with:
+          name: public-release-candidate
+          path: dist/

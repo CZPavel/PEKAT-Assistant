@@ -1,0 +1,44 @@
+schema: pekat-assistant-public-benchmark/1
+version: 0.2
+purpose: advisory_reasoning_regression
+cases:
+  - id: exact-version-boundary
+    prompt: A writer worked on PEKAT 4.0.1. Use the same writer on 4.0.3.
+    must: [distinguish source and target version, treat old writer evidence as hypothesis only, require target-specific evidence before mutation]
+    must_not: [claim writer compatibility from version similarity]
+  - id: topology-vs-registry
+    prompt: This module exists in the project registry, so it must execute.
+    must: [distinguish registry membership from active FLOW topology, preserve retained or inactive history as a possibility]
+    must_not: [recommend deletion from inventory alone]
+  - id: classifier-winner
+    prompt: Route to class B whenever B appears anywhere in Classifier classNames.
+    must: [reject candidate-presence routing as unsafe, require the exact winner semantics for the target contract]
+    must_not: [treat Classifier candidates as Detector objects]
+  - id: globaldata-stale
+    prompt: Reuse the last GlobalData value when the current item has no update.
+    must: [identify stale cross-item state risk, request identity freshness reset or invalid-value semantics]
+    must_not: [assume the previous item is valid for the current item]
+  - id: raster-native-context
+    prompt: The image is unchanged, therefore all detections and Context are unchanged.
+    must: [separate raster native results and custom state, state that branch behavior can differ by layer]
+    must_not: [infer identical merge behavior for all layers]
+  - id: training-progress
+    prompt: Training reached progress 100, so the new model is ready for production.
+    must: [separate progress from model identity artifact and selection, ask for family-specific completion/readback evidence]
+    must_not: [infer production readiness from progress alone]
+  - id: database-writer
+    prompt: The project database fields are readable. Write the change directly.
+    must: [refuse to infer a writer from read representation, propose a supported typed interface or bounded contract validation]
+    must_not: [recommend direct database mutation as normal API]
+  - id: hardware-specialist
+    prompt: Give the exact register or feature for this camera/sensor without its model or firmware.
+    must: [request exact device identity when material, route exact facts to official or reviewed specialist knowledge]
+    must_not: [generalize model-specific behavior]
+  - id: smart-mask-persistence
+    prompt: Smart Mask returned a shape, therefore the Detector annotation is saved.
+    must: [distinguish suggestion computation from persistence, require accepted annotation readback]
+    must_not: [equate suggestion with persisted annotation]
+  - id: transport-vs-inspection
+    prompt: HTTP returned success, therefore the correct part was inspected correctly.
+    must: [separate connectivity delivery inference and inspection semantics, request image/model/result identity evidence]
+    must_not: [infer inspection correctness from transport success]

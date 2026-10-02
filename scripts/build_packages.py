@@ -87,7 +87,7 @@ def expected_packages(root: Path) -> dict[str, bytes]:
 
         outputs[f"{SKILL}/{source}"] = re.sub(r"\[([^\]]+)\]\(([^)]+)\)", portable_link, text).encode("utf-8")
         text = re.sub(r"\[([^\]]+)\]\(([^)]+)\)", absolute_link, text)
-        sections.append(f"\n---\n\nSource: {source}\n\n{text.rstrip()}\n")
+        sections.append(f"\n---\n\nSource: " + chr(96) + source + chr(96) + f"\n\n{text.rstrip()}\n")
         entries.append({"source": source, "sha256": digest(data)})
 
     outputs[GPT] = "\n".join(sections).encode("utf-8")

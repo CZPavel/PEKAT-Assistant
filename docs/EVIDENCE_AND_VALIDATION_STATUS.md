@@ -42,3 +42,7 @@ Public edition functionality is advisory. Historical upstream implementation is 
 Repository tests prove packaging, sanitization, reference integrity and benchmark schema. They do not prove PEKAT runtime behavior.
 
 See [Validation](VALIDATION.md).
+
+## October evidence boundary
+
+The [decision guide](../knowledge/assistant/DECISION_GUIDE_403.md) separates current official 4.x descriptions, sanitized exact-4.0.3 upstream observations, offline axis-aligned recipes and open contracts. Sequential freshness is not concurrency or atomic JPEG/JSON proof; saved/selected model is not independently validated quality. SMALL_MODEL_LIVE_EVAL_NOT_RUN: public offline gates do not evaluate a language model.

@@ -34,3 +34,7 @@ Version scope: historical upstream exact 4.0.3 where stated. Evidence level: cur
 | Active learning/annotation review | Upstream roadmap | PLANNED | PLANNED | No completed workflow |
 | Voice/multimodal/closed loop | Future vision | PLANNED | UNSUPPORTED | Not an included feature |
 | Generic DB/store/event writer | Any | UNSUPPORTED | UNSUPPORTED | Intentionally absent |
+
+## October advisory update
+
+[Decision guide](../knowledge/assistant/DECISION_GUIDE_403.md) adds exact-4.0.3 state/freshness boundaries and short intent routing. No executable capability or writer authority is added.

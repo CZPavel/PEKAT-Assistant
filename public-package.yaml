@@ -36,6 +36,7 @@ knowledge_sources:
 - docs/VERSION_SUPPORT.md
 - docs/USER_SCENARIOS.md
 - docs/SPECIALIST_SKILLS.md
+- knowledge/assistant/DECISION_GUIDE_403.md
 schema: pekat-public-package/2
 validation:
   public_github_repositories:

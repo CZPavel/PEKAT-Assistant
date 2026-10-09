@@ -32,3 +32,5 @@ Original advisory topics; no vendor manuals or runtime controller. Historical ob
 - [IFM IO-Link to PEKAT](bridges/IFM_IOLINK_PEKAT_BRIDGE.md)
 - [KEYENCE LJ-X/LJ-S to PEKAT](bridges/KEYENCE_LJX_PEKAT_BRIDGE.md)
 - [MX-G2000 reasoning](bridges/MX_G2000_OPERATIONAL_ROUTE.md)
+
+- [October decision guide and contract gaps](assistant/DECISION_GUIDE_403.md)

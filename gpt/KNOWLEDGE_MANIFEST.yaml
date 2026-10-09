@@ -1,8 +1,8 @@
 files:
 - path: gpt/knowledge/PEKAT_ASSISTANT_KNOWLEDGE.md
-  sha256: 9331aaf72fb1e9a618c2562b2243b904a56dcf2301bd71be6f7b66666c95c940
+  sha256: 423beabec942ad16e477483938079acb077e05aaf2798cb6027a8220ce3a5442
   sources:
-  - sha256: 73c710cbbd6eb3dfefb86fec2619c2c798f2f7cd83cc32e352287ef7393b89d6
+  - sha256: 9062c537e5bd8e244f0d43318fffdfe941c81c11e2bb56fab333322904b963ad
     source: knowledge/INDEX.md
   - sha256: b9c55ea41444c7027db4f997f08c49f0a797d82b4ff823044f52141f48e4fe4e
     source: knowledge/assistant/ANOMALY_UNSUPERVISED.md
@@ -66,15 +66,17 @@ files:
     source: knowledge/bridges/MX_G2000_OPERATIONAL_ROUTE.md
   - sha256: aa0ae5d1e6a560c0fc75a845525612994a218611f64eafff5f9e6f86a623c662
     source: docs/ARCHITECTURE.md
-  - sha256: c5d3fca3212dff2c36962aec927ad5f4b5e7aff422c3a4d64b06aad0e637b9b7
+  - sha256: 55eac557ed87d55bd6ed5dac039212ef8455d42fdd2e760d2584ab9cf130b012
     source: docs/CAPABILITIES.md
   - sha256: fe59777fa27e074868c19d5ee9856381906984df0c71a4c6c65c8b7826a83ab9
     source: docs/EVIDENCE_MODEL.md
   - sha256: af21d102f6b251426962da8f8b669c600dd483df66897f7c2d772948ef7250ab
     source: docs/VERSION_SUPPORT.md
-  - sha256: 25ea7cc5e2845f82bc584574bb8e2cfcb45e489ac6464e80696dc91c0f9afff8
+  - sha256: 84e9e18429278a4a66f6a28139ff51981ca65ca84771bdab9d310b70c9cfa88a
     source: docs/USER_SCENARIOS.md
   - sha256: 5ec08efb19b88587494b1249e00326f51bde21e7560dd039e1e2d09d9af38a25
     source: docs/SPECIALIST_SKILLS.md
+  - sha256: 8af414754e4d8482f1fc441139650922bf4647ac548617dd5ae57346ba81e83b
+    source: knowledge/assistant/DECISION_GUIDE_403.md
 generated: true
 schema: pekat-public-gpt/1

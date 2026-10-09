@@ -48,3 +48,7 @@ These are not bundled hardware permissions.
 Preserve scenario status. AVAILABLE_NOW/PARTIALLY_AVAILABLE in the historical upstream catalog does not mean the public preview contains an executable tool. Native product availability, upstream implementation and public-package inclusion are distinct claims.
 
 Do not execute supplied Code, load unknown model weights, invent proprietary payloads or recommend direct project-database mutation. Installation grants no project, device, network or database mutation authority.
+
+## Compact intent selection
+
+For short Czech or English requests, normalize meaning across diacritics and word order; identify object, output and variant before choosing advice. Read [decision guide](references/knowledge/assistant/DECISION_GUIDE_403.md). Prefer a known closed workflow when explaining a separately authorized controller. Unsupported variants return an explicit contract gap, never a similar destructive writer. Keep preflight/readback and exact-version scope compact and explicit.

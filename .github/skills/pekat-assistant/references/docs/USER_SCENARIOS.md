@@ -71,3 +71,7 @@ Version scope: source catalog snapshot with narrow historical 4.0.3 evidence.
 Evidence level: reconciled requirements and curated capability conclusions.
 Known limitations: catalog statuses are historical upstream statuses; this public
 preview provides advice rather than executing those workflows.
+
+## Short Czech and English intents
+
+Use the [decision guide](../knowledge/assistant/DECISION_GUIDE_403.md) for ten practical intents, preflight/readback questions and unsupported variants. Workflow names describe separately authorized upstream implementations; this edition provides advice only.

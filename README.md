@@ -86,3 +86,7 @@ User / chat / agent
 A future official PEKAT MCP can fit as a transport/adapter over the same boundary. It is not assumed to exist or to authorize operations today.
 
 **Unofficial community project / not affiliated with or officially supported by the PEKAT VISION vendor.** Original project contributions are licensed under Apache-2.0; external vendor material retains its own ownership.
+
+## October update
+
+[Ten practical intent routes](knowledge/assistant/DECISION_GUIDE_403.md) cover Czech/English requests, frame freshness, image channels, crop coordinates and unsupported writer variants. This remains an advisory edition.

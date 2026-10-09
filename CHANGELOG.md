@@ -18,3 +18,9 @@ No PEKAT runtime controller, private transport implementation or customer eviden
 Initial advisory documentation, curated knowledge, standalone skill and Custom GPT guidance. Historical exact-4.0.3 upstream evidence is separated from included preview features.
 
 No runtime or hardware acceptance was performed for this public content release.
+
+## v0.2.1-public-preview — 2026-10-09
+
+- Added sanitized exact-4.0.3 decision guidance and ten Czech/English intent routes.
+- Clarified camera service state, annotation/filter/Unifier gaps, model validation and non-atomic image/JSON risk.
+- Preserved v0.2 packaging, standalone references and CI; no runtime controller added.

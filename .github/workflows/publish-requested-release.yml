@@ -40,6 +40,6 @@ jobs:
             gh release create "$version" dist/* \
               --prerelease \
               --target "$GITHUB_SHA" \
-              --title "v0.2.0 — Public preview" \
+              --title "$version — Public preview" \
               --generate-notes
           fi

@@ -210,6 +210,38 @@ Explain actual execution and branches rather than module inventory. Image raster
 
 Scope: advisory public rewrite. Runtime conclusions refer only to bounded historical upstream evidence, principally exact PEKAT VISION 4.0.3. No runtime tool or hardware validation is included.
 
+## User-guided functional design
+
+Evidence: general design advice and a synthetic illustration. This public pack has no candidate validator, runtime integration or writer. Patterns are recommendations, not mandatory module templates.
+
+Start with the user goal and functional hierarchy: whole object, regions, checks, dependencies and local/final outcomes. Preserve an explicitly supplied hierarchy where practical. If none is given, propose understandable groups and proceed when sufficient facts are known; clarification is not a compulsory approval gate. Explain departures using concrete dependencies, shared localization/inference, image transforms, copying cost, latency, uncertain joins or a more suitable native operation.
+
+Reason from goal to functional groups, dependencies, image domains, native/Code operations, useful branches, results and final image. Keep observed execution topology separate from every recommended alternative. Module inventory does not establish execution order.
+
+## Native-first alternatives and shared inference
+
+Compare sequential, branched and hierarchical alternatives. Prefer suitable native operations when they simplify design, preserving requested or necessary Code. Conditional Gate may replace simple custom decisions only after exact-version semantics and equivalence are established. Parallelism may reduce auxiliary Code for image handling or native-result forwarding; branch count is not an optimization target.
+
+Keep shared inference as one producer where input domain and requirements permit. Different preprocessing may justify a separate image branch without repeating shared inference. Explain rejected alternatives and tradeoffs: synchronization, Context ownership after joining, large-image copies, latency, module count and technician readability. Do not invent an empty branch as proof that the original image survives.
+
+## Image, result and visualization lineage
+
+Describe separately:
+
+- Original capture, each transformed/preprocessed raster and coordinate mapping.
+- Raster consumed by every check and the expected transfer at every join.
+- Native result provenance, local decisions and the final result collector/report.
+- Custom Context ownership, validity and freshness, separate from native results.
+- Final raster, native overlays and custom annotation rendering, including mapping to original coordinates.
+
+Merging decisions does not prove image merging or overlay transfer. A structurally consistent design proves neither runtime acceptance, model quality nor writer authority. Missing exact-version join/image/Context/overlay behavior remains an explicit open gap. Recommend the smallest separately authorized per-frame experiment that distinguishes competing behaviors; this advice does not execute it.
+
+## Synthetic example
+
+A fictional fixture has an upper symbol group and a lower fastener group. Preserve those user-facing groups, localize once and propose one shared object inference. One check consumes native results; another needs a contrast-adjusted raster. Discuss a separate preprocessing branch without automatically duplicating inference. Attribute each result to its producer and raster. Collect OK/NOK/UNKNOWN decisions explicitly.
+
+For visualization in original coordinates, name the original capture as the intended final raster, record every transform and map annotations back before rendering. Whether raster and native overlays survive a particular join remains unverified until tested on the exact version. A sequential alternative may be simpler when branching adds copies or uncertain joins. Explain the choice; no project is changed.
+
 
 ---
 
@@ -619,6 +651,10 @@ Version scope: historical upstream exact 4.0.3 where stated. Evidence level: cur
 ## October advisory update
 
 [Decision guide](https://github.com/CZPavel/PEKAT-Assistant/blob/main/knowledge/assistant/DECISION_GUIDE_403.md) adds exact-4.0.3 state/freshness boundaries and short intent routing. No executable capability or writer authority is added.
+
+## FLOW design advice
+
+The public knowledge explains user-guided functional grouping, native-first topology alternatives, shared inference and separate image/result/overlay lineage. It offers synthetic examples and reasoning guidance. Private offline candidate-validation implementation is not shipped here; no public automated validator, runtime acceptance or FLOW writer is implied. See [FLOW guidance](https://github.com/CZPavel/PEKAT-Assistant/blob/main/knowledge/assistant/FLOW_AUTHORING.md).
 
 
 ---

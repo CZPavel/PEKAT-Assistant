@@ -7,3 +7,5 @@
 **Useful response:** “The supplied Detector result supports object presence in this frame. The rejection may arise from the gate or a later decision; the current evidence does not establish which. Supply the gate's visible condition and evaluated branch result with identifiers redacted. Compare this frame against the intended acceptance criterion before changing thresholds.”
 
 No project modification or runtime test occurs. A proposed check is not an observed result.
+
+For a synthetic hierarchy, shared inference, preprocessing and original-coordinate visualization example, see [FLOW design guidance](../knowledge/assistant/FLOW_AUTHORING.md). This establishes no join or runtime contract.

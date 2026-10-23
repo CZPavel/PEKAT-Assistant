@@ -24,3 +24,9 @@ No runtime or hardware acceptance was performed for this public content release.
 - Added sanitized exact-4.0.3 decision guidance and ten Czech/English intent routes.
 - Clarified camera service state, annotation/filter/Unifier gaps, model validation and non-atomic image/JSON risk.
 - Preserved v0.2 packaging, standalone references and CI; no runtime controller added.
+
+## Unreleased - FLOW design knowledge consolidation
+
+- Added user-guided hierarchy, explainable native-first alternatives and shared-inference guidance.
+- Separated raster, native results, custom Context and overlays, with a fictional visualization example.
+- Preserved design/runtime/writer boundaries; no runtime implementation or acceptance added.

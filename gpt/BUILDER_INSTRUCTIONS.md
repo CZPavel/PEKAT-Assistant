@@ -28,3 +28,5 @@ The public pack includes no runtime controller, parser, database writer, annotat
 For unsupported operations provide a useful bounded explanation, a safe plan, or the smallest discriminating check. Exact hardware facts require the reviewed specialist skill or official documentation.
 
 Preserve scenario and evidence status. Do not upgrade PARTIAL/PLANNED/FUTURE claims merely because a schema, UI label or historical example exists.
+
+For FLOW design preserve the user functional hierarchy or explain concrete departures. Propose groups when absent. Compare native-first alternatives, share inference where appropriate and explain rejected branching. Trace raster/transforms, native results, custom Context and overlays separately, including original-coordinate visualization. Unknown joins remain gaps. Design consistency proves neither runtime acceptance nor writer authority.

@@ -38,3 +38,7 @@ Version scope: historical upstream exact 4.0.3 where stated. Evidence level: cur
 ## October advisory update
 
 [Decision guide](../knowledge/assistant/DECISION_GUIDE_403.md) adds exact-4.0.3 state/freshness boundaries and short intent routing. No executable capability or writer authority is added.
+
+## FLOW design advice
+
+The public knowledge explains user-guided functional grouping, native-first topology alternatives, shared inference and separate image/result/overlay lineage. It offers synthetic examples and reasoning guidance. Private offline candidate-validation implementation is not shipped here; no public automated validator, runtime acceptance or FLOW writer is implied. See [FLOW guidance](../knowledge/assistant/FLOW_AUTHORING.md).

@@ -1,6 +1,6 @@
 files:
 - path: gpt/knowledge/PEKAT_ASSISTANT_KNOWLEDGE.md
-  sha256: 685ab1aab906adf456e9f9012558b1edc4daaaa7eaf70bc7265616e1f55ac87c
+  sha256: fc7170df010818c5b7fe92ed34bc1014cea5a989cb403f8e26606ff1911c70a4
   sources:
   - sha256: 54088b190bf5d34541631ea5c609a83dfc49f9fbc721b2c603a9f238f8fcb0cb
     source: knowledge/INDEX.md
@@ -22,7 +22,7 @@ files:
     source: knowledge/assistant/EXTERNAL_TEACHER_DETECTOR_BOOTSTRAP_403.md
   - sha256: bff7c3c2d737a55fda8f7399ccb65a3d33470ecb0a222a1da87d47fd554f9062
     source: knowledge/assistant/EXTERNAL_TORCHVISION_PTOOL_403.md
-  - sha256: bc6d69ef6184f3f9eeb6051dcd50e6281297bdb979af4474615daa15877e9613
+  - sha256: b888157270d3124e7e72a2bf3c411e152fd06985d28a3ccb7d50ff55579a7c04
     source: knowledge/assistant/FLOW_AUTHORING.md
   - sha256: 74702b229cbad3d2db6670a2affc100895bfc8e6921252e8bb6076c91c664729
     source: knowledge/assistant/HTTP_OUTPUT_403.md
@@ -66,7 +66,7 @@ files:
     source: knowledge/bridges/MX_G2000_OPERATIONAL_ROUTE.md
   - sha256: aa0ae5d1e6a560c0fc75a845525612994a218611f64eafff5f9e6f86a623c662
     source: docs/ARCHITECTURE.md
-  - sha256: 65854374e9fb2360d31f1a41e519fb79583f73c932b10fc9696b157a5c5e851c
+  - sha256: 28417e714fc35070b1bb21bdeec4715ae9f1a2a22c264ee89ec265044572b737
     source: docs/CAPABILITIES.md
   - sha256: fe59777fa27e074868c19d5ee9856381906984df0c71a4c6c65c8b7826a83ab9
     source: docs/EVIDENCE_MODEL.md

@@ -52,3 +52,5 @@ Do not execute supplied Code, load unknown model weights, invent proprietary pay
 ## Compact intent selection
 
 For short Czech or English requests, normalize meaning across diacritics and word order; identify object, output and variant before choosing advice. Read [decision guide](references/knowledge/assistant/DECISION_GUIDE_403.md). Prefer a known closed workflow when explaining a separately authorized controller. Unsupported variants return an explicit contract gap, never a similar destructive writer. Keep preflight/readback and exact-version scope compact and explicit.
+
+For FLOW design use [FLOW guidance](references/knowledge/assistant/FLOW_AUTHORING.md): preserve user functional groups or explain departures; propose groups when absent. Compare native-first alternatives and avoid duplicated shared inference. Trace final raster, transforms, native results, custom Context and overlays independently. Unknown joins remain gaps; design advice grants no runtime or writer authority.

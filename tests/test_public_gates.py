@@ -35,6 +35,24 @@ class PublicGates(unittest.TestCase):
     def test_current_release_valid(self):
         self.assertEqual(validate(ROOT), [])
 
+    def test_current_advisory_semantics_and_generated_propagation(self):
+        cases = {
+            "DETECTOR_ANNOTATION_403.md": ("ID-specific", "PRESENT_EMPTY", "sibling preservation"),
+            "OCR_ANNOTATION.md": ("whole-string rectangle", "split-to-characters", "arbitrary interactive drag"),
+            "FLOW_AUTHORING.md": ("BRIGHTNESS_CONTRAST", "0.01..4", "strict integer", "Any/Every/Together"),
+            "DECISION_GUIDE_403.md": ("2026-10-09", "read-only", "superseded", "Cycles"),
+        }
+        aggregate = (ROOT / "gpt/knowledge/PEKAT_ASSISTANT_KNOWLEDGE.md").read_text(encoding="utf-8")
+        for name, required in cases.items():
+            source = "knowledge/assistant/" + name
+            text = (ROOT / source).read_text(encoding="utf-8")
+            portable = (ROOT / ".github/skills/pekat-assistant/references" / source).read_text(encoding="utf-8")
+            for term in required:
+                with self.subTest(source=source, term=term):
+                    self.assertIn(term, text)
+                    self.assertIn(term, portable)
+                    self.assertIn(term, aggregate)
+
     def test_secret_is_rejected(self):
         value = "gh" + "p_" + "a" * 36
         self.assertIn("GitHub token", text_issues(value, self.policy))

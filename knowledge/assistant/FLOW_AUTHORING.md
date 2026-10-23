@@ -39,3 +39,9 @@ Merging decisions does not prove image merging or overlay transfer. A structural
 A fictional fixture has an upper symbol group and a lower fastener group. Preserve those user-facing groups, localize once and propose one shared object inference. One check consumes native results; another needs a contrast-adjusted raster. Discuss a separate preprocessing branch without automatically duplicating inference. Attribute each result to its producer and raster. Collect OK/NOK/UNKNOWN decisions explicitly.
 
 For visualization in original coordinates, name the original capture as the intended final raster, record every transform and map annotations back before rendering. Whether raster and native overlays survive a particular join remains unverified until tested on the exact version. A sequential alternative may be simpler when branching adds copies or uncertain joins. Explain the choice; no project is changed.
+
+## Current bounded support — 2026-10-23
+
+Exact 4.0.3 C1 accepts editing an existing BRIGHTNESS_CONTRAST item: brightness integer -255..255 and finite contrast 0.01..4, preserving siblings. This is distinct from PREPROCESS CUT and Contrast equalisation. Arbitrary filter creation/chains remain outside this subset.
+
+Conditional Gate accepted variants are Boolean EQUAL, finite numeric GlobalData comparisons, nested AND/OR Context/Result groups, and D1 Rectangle COUNT with strict integer operands and Any/Every/Together selectors. The historical float COUNT failure does not exclude that integer subset. Other Rectangle properties and explicit classes remain excluded. This package supplies advisory knowledge, not execution authority.

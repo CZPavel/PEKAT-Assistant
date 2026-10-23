@@ -36,3 +36,11 @@ A completed, saved, selected Detector model was observed upstream. No independen
 Image Saver documentation describes all/OK/NG filtering, Context JSON, overlay/heatmap, Local/FTP and naming options. Sequential identity checks support a bounded freshness conclusion only. Pair image and JSON by explicit identity and account for partial writes; concurrency, crash recovery and atomic pairing remain open gaps.
 
 No new native writer capability was promoted by the October mapping. The public edition contains this explanation, references and offline validation tooling; it contains no controller, private Core, raw evidence or hardware operation. Deterministic private routing tests are not a live small-model evaluation. SMALL_MODEL_LIVE_EVAL_NOT_RUN applies unless a separately recorded model run establishes otherwise.
+
+## Current bounded support and routing — 2026-10-23
+
+The table above preserves the 2026-10-09 checkpoint. Later exact 4.0.3 accepted subsets qualify its historical gaps: [ID-specific Detector edits](DETECTOR_ANNOTATION_403.md), [Brightness/Contrast and Gate variants](FLOW_AUTHORING.md), and [OCR region authoring](OCR_ANNOTATION.md). Brightness/Contrast is distinct from Contrast equalisation; a crop never substitutes for either.
+
+Prefer an existing closed workflow matching the requested outcome. Intent recognition is read-only and grants no writer authority. Confirm exact version, capability state, parameter schema, preflight and explicit authorization in the separately installed controller. Negated, ambiguous, unknown or unsupported requests must remain classified gaps; never substitute a similar destructive action.
+
+Knowledge lookup must prefer applicable current evidence over explicitly superseded evidence while retaining history and do_not_repeat. Follow multi-step supersession only within matching version/contract/evidence scope. Cycles, conflicting relations or unclear scope require an explicit unresolved result rather than an inferred promotion. A newer date alone is insufficient.

@@ -146,6 +146,10 @@ Preserve existing annotations during insertion. First-create, additive insertion
 
 Scope: advisory public rewrite. Runtime conclusions refer only to bounded historical upstream evidence, principally exact PEKAT VISION 4.0.3. No runtime tool or hardware validation is included.
 
+## Current bounded support — 2026-10-23
+
+Exact 4.0.3 upstream C1 accepts ID-specific relabel, move, resize, stored-anchor rotation and delete of an existing Detector rectangle. Require an explicit existing rectangle ID, fresh preimage, sibling preservation and independent readback. Last-object deletion persists PRESENT_EMPTY, not ABSENT. Image-wide Clear and compatibility replacement are different operations. This advisory package includes no writer.
+
 
 ---
 
@@ -242,6 +246,12 @@ A fictional fixture has an upper symbol group and a lower fastener group. Preser
 
 For visualization in original coordinates, name the original capture as the intended final raster, record every transform and map annotations back before rendering. Whether raster and native overlays survive a particular join remains unverified until tested on the exact version. A sequential alternative may be simpler when branching adds copies or uncertain joins. Explain the choice; no project is changed.
 
+## Current bounded support — 2026-10-23
+
+Exact 4.0.3 C1 accepts editing an existing BRIGHTNESS_CONTRAST item: brightness integer -255..255 and finite contrast 0.01..4, preserving siblings. This is distinct from PREPROCESS CUT and Contrast equalisation. Arbitrary filter creation/chains remain outside this subset.
+
+Conditional Gate accepted variants are Boolean EQUAL, finite numeric GlobalData comparisons, nested AND/OR Context/Result groups, and D1 Rectangle COUNT with strict integer operands and Any/Every/Together selectors. The historical float COUNT failure does not exclude that integer subset. Other Rectangle properties and explicit classes remain excluded. This package supplies advisory knowledge, not execution authority.
+
 
 ---
 
@@ -301,6 +311,10 @@ Known limitations: no included runtime controller, parser, writer or hardware ac
 Separate region geometry, transcription and character partition. Historical upstream changes concerned an existing region; new-region authoring and external transcription service policy remained gaps. Require human review and appropriate privacy handling.
 
 Scope: advisory public rewrite. Runtime conclusions refer only to bounded historical upstream evidence, principally exact PEKAT VISION 4.0.3. No runtime tool or hardware validation is included.
+
+## Current bounded support — 2026-10-23
+
+The historical existing-region-only observation above is superseded within the exact 4.0.3 C1/C2 authoring subset: region creation/deletion, normalized geometry, length-changing transcription, initial N-character partition and separator editing. Preserve whole-string rectangle → transcription → split-to-characters → boundary adjustment. Require fresh preimage, sibling preservation and readback. E1.1 center-preserving rotation at fixed geometry does not prove arbitrary interactive drag. External transcription privacy and service policy remain separate. No public writer is included.
 
 
 ---
@@ -841,3 +855,11 @@ A completed, saved, selected Detector model was observed upstream. No independen
 Image Saver documentation describes all/OK/NG filtering, Context JSON, overlay/heatmap, Local/FTP and naming options. Sequential identity checks support a bounded freshness conclusion only. Pair image and JSON by explicit identity and account for partial writes; concurrency, crash recovery and atomic pairing remain open gaps.
 
 No new native writer capability was promoted by the October mapping. The public edition contains this explanation, references and offline validation tooling; it contains no controller, private Core, raw evidence or hardware operation. Deterministic private routing tests are not a live small-model evaluation. SMALL_MODEL_LIVE_EVAL_NOT_RUN applies unless a separately recorded model run establishes otherwise.
+
+## Current bounded support and routing — 2026-10-23
+
+The table above preserves the 2026-10-09 checkpoint. Later exact 4.0.3 accepted subsets qualify its historical gaps: [ID-specific Detector edits](https://github.com/CZPavel/PEKAT-Assistant/blob/main/knowledge/assistant/DETECTOR_ANNOTATION_403.md), [Brightness/Contrast and Gate variants](https://github.com/CZPavel/PEKAT-Assistant/blob/main/knowledge/assistant/FLOW_AUTHORING.md), and [OCR region authoring](https://github.com/CZPavel/PEKAT-Assistant/blob/main/knowledge/assistant/OCR_ANNOTATION.md). Brightness/Contrast is distinct from Contrast equalisation; a crop never substitutes for either.
+
+Prefer an existing closed workflow matching the requested outcome. Intent recognition is read-only and grants no writer authority. Confirm exact version, capability state, parameter schema, preflight and explicit authorization in the separately installed controller. Negated, ambiguous, unknown or unsupported requests must remain classified gaps; never substitute a similar destructive action.
+
+Knowledge lookup must prefer applicable current evidence over explicitly superseded evidence while retaining history and do_not_repeat. Follow multi-step supersession only within matching version/contract/evidence scope. Cycles, conflicting relations or unclear scope require an explicit unresolved result rather than an inferred promotion. A newer date alone is insufficient.

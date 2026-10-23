@@ -1,5 +1,10 @@
 # Changelog
 
+## Unreleased — ecosystem reconciliation 2026-10-23
+
+- Added scoped Detector, Brightness/Contrast, OCR and Gate advisory updates, workflow-first selection and supersession boundaries. Preserved historical observations and public-only authority.
+
+
 ## v0.2.0 public-preview preparation
 
 - Expanded the public human-facing knowledge with practical runtime rules.

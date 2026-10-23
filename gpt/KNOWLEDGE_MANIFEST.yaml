@@ -1,6 +1,6 @@
 files:
 - path: gpt/knowledge/PEKAT_ASSISTANT_KNOWLEDGE.md
-  sha256: fc7170df010818c5b7fe92ed34bc1014cea5a989cb403f8e26606ff1911c70a4
+  sha256: f5fb82d7761a69f24367619be96cdcb4c83fd74f7c9cd3cd0a670c06c4034764
   sources:
   - sha256: 54088b190bf5d34541631ea5c609a83dfc49f9fbc721b2c603a9f238f8fcb0cb
     source: knowledge/INDEX.md
@@ -14,7 +14,7 @@ files:
     source: knowledge/assistant/CROSS_PEKAT_403.md
   - sha256: b79b0ad2a8b0dfbf8ec33bd3f01fca412e7bc05fd189f31c77ce1eeaaba47193
     source: knowledge/assistant/DATA_MODEL_PORTABILITY.md
-  - sha256: 7dd04dfd93fcbb63ea0a6a54c8ae6288c264a1f535d9a8fd3e9bd6c90c0c0dc2
+  - sha256: 95172c16421a90f8cecb5443c0de780666f085d8638940634303f9e71e5d4120
     source: knowledge/assistant/DETECTOR_ANNOTATION_403.md
   - sha256: f432c604f33a8a6e6cbb4cedb27e1b220fc1b05d4dca853999b586fceb1e4112
     source: knowledge/assistant/DETECTOR_CLASSIFIER_OCR.md
@@ -22,7 +22,7 @@ files:
     source: knowledge/assistant/EXTERNAL_TEACHER_DETECTOR_BOOTSTRAP_403.md
   - sha256: bff7c3c2d737a55fda8f7399ccb65a3d33470ecb0a222a1da87d47fd554f9062
     source: knowledge/assistant/EXTERNAL_TORCHVISION_PTOOL_403.md
-  - sha256: b888157270d3124e7e72a2bf3c411e152fd06985d28a3ccb7d50ff55579a7c04
+  - sha256: d20cf04f7b5f420d80d834f0fbc20dc74a69a3490960e47608261c44be59c739
     source: knowledge/assistant/FLOW_AUTHORING.md
   - sha256: 74702b229cbad3d2db6670a2affc100895bfc8e6921252e8bb6076c91c664729
     source: knowledge/assistant/HTTP_OUTPUT_403.md
@@ -30,7 +30,7 @@ files:
     source: knowledge/assistant/LOG_DIAGNOSTICS.md
   - sha256: 3dccf3987e3a9943082ea81556914646f154d347044fbb61396766dace09c348
     source: knowledge/assistant/MODERNIZATION_ADVISOR.md
-  - sha256: f64a8c0678ace43a7d6769050ed26c84d737e07224fbc9143e3842508c6cde9a
+  - sha256: 9abfe26fbd4f83c27c81613f3b538f67ce7dbe2b6bbb01e9688c21e39fa64998
     source: knowledge/assistant/OCR_ANNOTATION.md
   - sha256: 63cb2f2b47f0c8e0174ba7d684688c3a91e19d4d0d9efe6263ceec0593eeb00e
     source: knowledge/assistant/PEKAT_VERSION_CAPABILITY_DELTA.md
@@ -76,7 +76,7 @@ files:
     source: docs/USER_SCENARIOS.md
   - sha256: 5ec08efb19b88587494b1249e00326f51bde21e7560dd039e1e2d09d9af38a25
     source: docs/SPECIALIST_SKILLS.md
-  - sha256: a4c02aae4d1e6c80cad4fa38e69b4b9a1aa3d80f1168918bb76f63506f8ffb34
+  - sha256: d2f40b1ab31bc5da6fa28b5d11dea1500404bafb0e6946cb0be4e2e374a475e8
     source: knowledge/assistant/DECISION_GUIDE_403.md
 generated: true
 schema: pekat-public-gpt/1

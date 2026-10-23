@@ -75,3 +75,7 @@ Distributed/shared-state integrations need identity, freshness, timeout, duplica
 Version similarity is evidence for investigation, not writer authority.
 
 A behavior observed on 4.0.1 may inform a 4.0.3 hypothesis. It does not prove a 4.0.3 writer or runtime contract. Future PEKAT versions should be treated as fresh version intake until bounded evidence exists.
+
+## Current capability and knowledge boundaries — 2026-10-23
+
+Use the [current decision-guide addendum](../knowledge/assistant/DECISION_GUIDE_403.md) for ID-specific Detector edits, Brightness/Contrast, OCR authoring and accepted Gate variants. Dated negative observations remain historical evidence. Supersession applies only to the matching exact-version contract and evidence scope; retain do_not_repeat and disclose cycles/conflicts. Workflow-first intent selection remains read-only and cannot authorize execution. Public main, released artifacts and hosted GPT knowledge are separate states; local generation does not update a hosted assistant.

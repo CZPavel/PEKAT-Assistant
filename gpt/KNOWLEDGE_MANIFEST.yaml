@@ -1,6 +1,6 @@
 files:
 - path: gpt/knowledge/PEKAT_ASSISTANT_KNOWLEDGE.md
-  sha256: f5fb82d7761a69f24367619be96cdcb4c83fd74f7c9cd3cd0a670c06c4034764
+  sha256: cbd39b2a43db19f58615a095a0dff6d517bcc52ba20f6fc216a948f2b558a87d
   sources:
   - sha256: 54088b190bf5d34541631ea5c609a83dfc49f9fbc721b2c603a9f238f8fcb0cb
     source: knowledge/INDEX.md
@@ -76,7 +76,7 @@ files:
     source: docs/USER_SCENARIOS.md
   - sha256: 5ec08efb19b88587494b1249e00326f51bde21e7560dd039e1e2d09d9af38a25
     source: docs/SPECIALIST_SKILLS.md
-  - sha256: d2f40b1ab31bc5da6fa28b5d11dea1500404bafb0e6946cb0be4e2e374a475e8
+  - sha256: 5fa122b3a2aa3114ec1011072eb16ec9b5f00bed10a4476ec12c9d2a704fa1bd
     source: knowledge/assistant/DECISION_GUIDE_403.md
 generated: true
 schema: pekat-public-gpt/1

@@ -819,11 +819,32 @@ Source: `knowledge/assistant/DECISION_GUIDE_403.md`
 
 # PEKAT 4.0.3 decision guide — October update
 
-This advisory card summarizes sanitized upstream observations from 2026-10-09. It distributes no runtime controller. Current official PEKAT 4.x documentation, exact-4.0.3 observations and offline recipes are separate evidence classes; none grants execution authority.
+This advisory card separates current bounded support (2026-10-23) from the historical 2026-10-09 checkpoint. The older table below preserves historical gaps, not current blanket prohibitions. It distributes no runtime controller. Current official PEKAT 4.x documentation, exact-4.0.3 observations and offline recipes are separate evidence classes; none grants execution authority.
+
+## Current bounded support and routing — 2026-10-23
+
+The historical table below preserves the 2026-10-09 checkpoint. Later exact 4.0.3 accepted subsets qualify its historical gaps: [ID-specific Detector edits](https://github.com/CZPavel/PEKAT-Assistant/blob/main/knowledge/assistant/DETECTOR_ANNOTATION_403.md), [Brightness/Contrast and Gate variants](https://github.com/CZPavel/PEKAT-Assistant/blob/main/knowledge/assistant/FLOW_AUTHORING.md), and [OCR region authoring](https://github.com/CZPavel/PEKAT-Assistant/blob/main/knowledge/assistant/OCR_ANNOTATION.md). Brightness/Contrast is distinct from Contrast equalisation; a crop never substitutes for either.
+
+| Current exact-4.0.3 subset | Accepted boundary in the separately authorized Assistant |
+|---|---|
+| Detector ID-specific edit | Existing rectangle ID: relabel/move/resize/stored-anchor rotate/delete; fresh preimage and sibling preservation. Last-object deletion is PRESENT_EMPTY, not ABSENT. Image-wide Clear is a different operation. |
+| Brightness/Contrast | Edit an existing BRIGHTNESS_CONTRAST item: brightness integer -255..255, finite contrast 0.01..4. Filter creation/chains and Contrast equalisation are outside this subset; PREPROCESS CUT is different. |
+| OCR authoring | Region creation/deletion, geometry, transcription, character partition and separator editing. Arbitrary interactive drag remains unaccepted. |
+| Conditional Gate | Boolean EQUAL, finite numeric GlobalData comparisons, nested AND/OR Context/Result groups, strict integer Rectangle COUNT Any/Every/Together; other Rectangle properties and explicit classes remain excluded. |
+
+These are bounded upstream accepted contracts. This public package contains no runtime controller or writer and grants no execution authority.
+
+Prefer an existing closed workflow matching the requested outcome. Intent recognition is read-only and grants no writer authority. Confirm exact version, capability state, parameter schema, preflight and explicit authorization in the separately installed controller. Negated, ambiguous, unknown or unsupported requests must remain classified gaps; never substitute a similar destructive action.
+
+Knowledge lookup must prefer applicable current evidence over explicitly superseded evidence while retaining history and do_not_repeat. Follow multi-step supersession only within matching version/contract/evidence scope. Cycles, conflicting relations or unclear scope require an explicit unresolved result rather than an inferred promotion. A newer date alone is insufficient.
 
 ## Choose the function before the tool
 
 Interpret short Czech or English requests by the object, intended result and variant, even when word order or accents differ. Prefer an existing closed workflow in an separately installed authorized controller. This package can explain its preconditions and checks; it cannot execute it. Confirm exact version, required arguments, project state, side effects, preflight and readback before proposing execution.
+
+## Historical checkpoint — 2026-10-09
+
+The following table records the earlier checkpoint only. Its Detector delete/relabel and Contrast gap statements are qualified by the current bounded support above; use that current section for accepted exact-4.0.3 subsets.
 
 | Request / intent | Advisory route | Boundary and useful check |
 |---|---|---|
@@ -855,11 +876,3 @@ A completed, saved, selected Detector model was observed upstream. No independen
 Image Saver documentation describes all/OK/NG filtering, Context JSON, overlay/heatmap, Local/FTP and naming options. Sequential identity checks support a bounded freshness conclusion only. Pair image and JSON by explicit identity and account for partial writes; concurrency, crash recovery and atomic pairing remain open gaps.
 
 No new native writer capability was promoted by the October mapping. The public edition contains this explanation, references and offline validation tooling; it contains no controller, private Core, raw evidence or hardware operation. Deterministic private routing tests are not a live small-model evaluation. SMALL_MODEL_LIVE_EVAL_NOT_RUN applies unless a separately recorded model run establishes otherwise.
-
-## Current bounded support and routing — 2026-10-23
-
-The table above preserves the 2026-10-09 checkpoint. Later exact 4.0.3 accepted subsets qualify its historical gaps: [ID-specific Detector edits](https://github.com/CZPavel/PEKAT-Assistant/blob/main/knowledge/assistant/DETECTOR_ANNOTATION_403.md), [Brightness/Contrast and Gate variants](https://github.com/CZPavel/PEKAT-Assistant/blob/main/knowledge/assistant/FLOW_AUTHORING.md), and [OCR region authoring](https://github.com/CZPavel/PEKAT-Assistant/blob/main/knowledge/assistant/OCR_ANNOTATION.md). Brightness/Contrast is distinct from Contrast equalisation; a crop never substitutes for either.
-
-Prefer an existing closed workflow matching the requested outcome. Intent recognition is read-only and grants no writer authority. Confirm exact version, capability state, parameter schema, preflight and explicit authorization in the separately installed controller. Negated, ambiguous, unknown or unsupported requests must remain classified gaps; never substitute a similar destructive action.
-
-Knowledge lookup must prefer applicable current evidence over explicitly superseded evidence while retaining history and do_not_repeat. Follow multi-step supersession only within matching version/contract/evidence scope. Cycles, conflicting relations or unclear scope require an explicit unresolved result rather than an inferred promotion. A newer date alone is insufficient.

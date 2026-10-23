@@ -53,6 +53,23 @@ class PublicGates(unittest.TestCase):
                     self.assertIn(term, portable)
                     self.assertIn(term, aggregate)
 
+    def test_decision_guide_prioritizes_current_scope_over_historical_gaps(self):
+        source = "knowledge/assistant/DECISION_GUIDE_403.md"
+        for path in (ROOT / source, ROOT / ".github/skills/pekat-assistant/references" / source):
+            with self.subTest(path=path):
+                text = path.read_text(encoding="utf-8")
+                current, historical = text.split("## Historical checkpoint — 2026-10-09", 1)
+                self.assertIn("## Current bounded support and routing", current)
+                for term in ("Existing rectangle ID", "PRESENT_EMPTY, not ABSENT",
+                             "existing BRIGHTNESS_CONTRAST item", "0.01..4",
+                             "no runtime controller or writer", "no execution authority"):
+                    self.assertIn(term, current)
+                self.assertNotIn("writer remains a contract gap", current)
+                self.assertIn("Generic delete-by-ID/relabel writer remains a contract gap", historical)
+                self.assertIn("upstream writer is CUT-only", historical)
+                self.assertIn("Contrast writer is a gap", historical)
+                self.assertIn("earlier checkpoint only", historical)
+
     def test_secret_is_rejected(self):
         value = "gh" + "p_" + "a" * 36
         self.assertIn("GitHub token", text_issues(value, self.policy))

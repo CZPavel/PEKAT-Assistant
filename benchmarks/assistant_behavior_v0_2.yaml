@@ -42,3 +42,37 @@ cases:
     prompt: HTTP returned success, therefore the correct part was inspected correctly.
     must: [separate connectivity delivery inference and inspection semantics, request image/model/result identity evidence]
     must_not: [infer inspection correctness from transport success]
+  - id: flow-user-hierarchy
+    prompt: Group a fictional fixture into upper symbols and lower fasteners. Keep these
+      functional groups.
+    must:
+    - preserve functional hierarchy or explain a concrete departure
+    - separate recommended topology from observed topology
+    must_not:
+    - replace user grouping solely with module type groups
+  - id: flow-propose-hierarchy
+    prompt: Design two checks for a fictional fixture; no hierarchy is supplied.
+    must:
+    - propose useful functional groups when sufficient facts are available
+    must_not:
+    - require approval before giving useful design advice
+  - id: flow-shared-inference
+    prompt: Duplicate one shared object inference in two branches because one check
+      needs contrast preprocessing.
+    must:
+    - consider one shared inference producer
+    - explain separate preprocessing domain and branch costs
+    - compare simpler native alternatives
+    must_not:
+    - duplicate inference without a concrete dependency
+  - id: flow-original-visualization
+    prompt: Keep the original capture for final visualization while a check uses a transformed
+      raster.
+    must:
+    - trace original and transformed rasters and coordinate mappings
+    - separate native results custom Context and overlays
+    - mark unknown join behavior as a gap
+    - distinguish design validity from runtime acceptance and writer authority
+    must_not:
+    - claim result merge proves image merge
+    - invent empty branch preservation as verified

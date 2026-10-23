@@ -5,3 +5,5 @@ PEKAT VISION, Basler, pylon, KEYENCE, IFM, IO-Link, Torchvision and other produc
 Public knowledge is newly written explanatory material. Vendor manuals, SDK binaries, proprietary schemas, models, checkpoints and customer projects are not included. The repository license does not license external material.
 
 Optional specialist sources and dependencies have their own terms; review their original licenses before redistribution. Mentioning a model does not distribute its weights or grant rights to them.
+
+The FLOW design consolidation is newly authored general guidance with a fictional fixture example. It includes no vendor-document excerpts, customer geometry, private implementation or runtime evidence.

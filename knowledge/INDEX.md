@@ -2,6 +2,8 @@
 
 Original advisory topics; no vendor manuals or runtime controller. Historical observations retain exact-version limits.
 
+Start with the [practical domain guide](../docs/PUBLIC_DOMAIN_GUIDE.md) for purpose, scenario, inputs, native functions, Assistant role and automation limits. See the [seven public capability classes](../docs/PUBLIC_CAPABILITY_GUIDE.md#public-capability-classification) and [version evidence matrix](../docs/VERSION_MATRIX.md) before treating a historical observation as current capability.
+
 - [Inspection design](assistant/VISION_DESIGN.md)
 - [Camera acquisition](assistant/CAMERA_ACQUISITION.md)
 - [FLOW interpretation](assistant/FLOW_AUTHORING.md)

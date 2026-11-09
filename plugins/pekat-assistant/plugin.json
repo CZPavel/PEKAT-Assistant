@@ -1,0 +1,12 @@
+{
+  "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+  "name": "pekat-assistant",
+  "version": "0.2.1-public-preview",
+  "description": "Evidence-bound advisory workflows for PEKAT VISION. No runtime controller or device access.",
+  "license": "Apache-2.0",
+  "keywords": [
+    "machine-vision",
+    "pekat",
+    "inspection"
+  ]
+}

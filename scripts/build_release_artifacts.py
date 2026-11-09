@@ -81,7 +81,19 @@ def build(ref: str, output: Path) -> list[Path]:
         gpt_zip = output / f"pekat-assistant-gpt-{name}.zip"
         write_zip(gpt_dst, gpt_zip, prefix="pekat-assistant-gpt")
 
-    artifacts = [skill_zip, gpt_zip]
+        from build_plugin import PLUGIN, validate as validate_plugin
+        issues = validate_plugin(ROOT)
+        if issues:
+            raise ValueError("Plugin validation failed: " + "; ".join(issues))
+        plugin_dst = temp / "plugin"
+        shutil.copytree(ROOT / PLUGIN, plugin_dst)
+        for path in plugin_dst.rglob("*.md"):
+            path.write_text(pin_text(path.read_text(encoding="utf-8"), ref), encoding="utf-8")
+        # Uploadable portable packages have plugin.json at the archive root.
+        plugin_zip = output / f"pekat-assistant-plugin-{name}.zip"
+        write_zip(plugin_dst, plugin_zip)
+
+    artifacts = [skill_zip, gpt_zip, plugin_zip]
     sums = output / "SHA256SUMS.txt"
     sums.write_text("".join(f"{sha256(path)}  {path.name}\n" for path in artifacts), encoding="utf-8")
     validation = output / "VALIDATION.md"

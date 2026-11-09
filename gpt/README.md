@@ -1,11 +1,5 @@
-# Custom GPT setup
+# Custom GPT knowledge and migration
 
-Use [Builder instructions](BUILDER_INSTRUCTIONS.md) and the generated [public knowledge aggregate](knowledge/PEKAT_ASSISTANT_KNOWLEDGE.md). They supply advisory reference content, not actions, credentials or hardware connections.
+The public Builder instructions and generated knowledge aggregate in this directory are repository artifacts, not a verified account export. Use the [portable plugin](../plugins/pekat-assistant/README.md) and [migration checklist](../docs/GPT_PLUGIN_MIGRATION.md) for the replacement.
 
-Create the GPT in your own environment, add instructions and upload only generated public knowledge. Review data handling before uploading private project information.
-
-Test with the [advisory example](../examples/advisory-workflow.md). Confirm that the assistant preserves exact versions, states unknowns and never claims to have operated PEKAT.
-
-## Update handoff
-
-Build the validated public package using the existing release-artifact builder with the reviewed commit ref. In the GPT editor, replace the builder instructions and knowledge with the generated package, verify the four FLOW cases in the public behavior benchmark, then save using the intended visibility. A generated ZIP and passing publication checks do not deploy or update a hosted GPT. This repository contains no supported automatic GPT deployment mechanism.
+Existing unmigrated GPT owners can maintain essential published instructions and knowledge where their account permits. New GPT creation and migration eligibility vary by account. Build and validate the public packages before replacing knowledge. Repository packaging does not deploy a GPT, migrate an account, preserve Actions or give existing users plugin access.

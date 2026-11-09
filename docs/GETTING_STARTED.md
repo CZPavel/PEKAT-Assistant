@@ -23,6 +23,10 @@ The public skill does not connect to PEKAT or equipment.
 
 Follow [GPT setup](../gpt/README.md). Use the builder instructions plus the generated public knowledge. Review data handling before uploading private project information.
 
+## Portable plugin
+
+Follow the [plugin installation and test guide](../plugins/pekat-assistant/README.md). It uses the same curated public knowledge and needs no private Core for ordinary questions. Repository packaging is validated; host installation and answer-quality acceptance remain pending. Existing GPT owners should use the [migration checklist](GPT_PLUGIN_MIGRATION.md) before changing their published account configuration.
+
 ## Useful first prompts
 
 - Explain this sanitized FLOW and separate active execution from retained module inventory.

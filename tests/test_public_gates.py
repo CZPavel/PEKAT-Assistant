@@ -5,6 +5,7 @@ import subprocess
 import sys
 import tempfile
 import unittest
+import zipfile
 from pathlib import Path
 from unittest.mock import patch
 
@@ -166,6 +167,12 @@ class PublicGates(unittest.TestCase):
         artifacts = build_release("v-test", out)
         self.assertTrue(all(path.is_file() for path in artifacts))
         self.assertIn("v-test", (out / "VALIDATION.md").read_text(encoding="utf-8"))
+        with zipfile.ZipFile(out / "pekat-assistant-plugin-v-test.zip") as archive:
+            self.assertIn("plugin.json", archive.namelist())
+            self.assertIn("skills/pekat-assistant/SKILL.md", archive.namelist())
+            for name in archive.namelist():
+                if name.endswith(".md"):
+                    self.assertNotIn("/PEKAT-Assistant/blob/main/", archive.read(name).decode("utf-8"))
 
 
 if __name__ == "__main__":

@@ -28,6 +28,8 @@ Potential work: sanitized log and training-history reports, supplied project exp
 
 ## Stage C — public assisted workflows
 
+**Delivered foundation:** a portable skills-only [plugin RC](../plugins/pekat-assistant/README.md), generated references, static routing fixtures and [GPT migration checklist](GPT_PLUGIN_MIGRATION.md). Host installation, model-answer evaluation, account migration and official directory publication remain separate acceptance gates. No MCP or private Core dependency is bundled.
+
 **Goal:** turn common engineering tasks into understandable end-to-end user journeys: describe a defect, choose image acquisition, draft FLOW, inspect evidence, diagnose a failure and verify an improvement.
 
 A possible later integration may connect these journeys to supported, permissioned PEKAT interfaces. Approval, bounded scope, readback and failure handling are prerequisites. Native GUI capability does not by itself mean a public automated action exists.

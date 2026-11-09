@@ -11,6 +11,8 @@ Source: `knowledge/INDEX.md`
 
 Original advisory topics; no vendor manuals or runtime controller. Historical observations retain exact-version limits.
 
+Start with the [practical domain guide](https://github.com/CZPavel/PEKAT-Assistant/blob/main/docs/PUBLIC_DOMAIN_GUIDE.md) for purpose, scenario, inputs, native functions, Assistant role and automation limits. See the [seven public capability classes](https://github.com/CZPavel/PEKAT-Assistant/blob/main/docs/PUBLIC_CAPABILITY_GUIDE.md#public-capability-classification) and [version evidence matrix](https://github.com/CZPavel/PEKAT-Assistant/blob/main/docs/VERSION_MATRIX.md) before treating a historical observation as current capability.
+
 - [Inspection design](https://github.com/CZPavel/PEKAT-Assistant/blob/main/knowledge/assistant/VISION_DESIGN.md)
 - [Camera acquisition](https://github.com/CZPavel/PEKAT-Assistant/blob/main/knowledge/assistant/CAMERA_ACQUISITION.md)
 - [FLOW interpretation](https://github.com/CZPavel/PEKAT-Assistant/blob/main/knowledge/assistant/FLOW_AUTHORING.md)
@@ -489,13 +491,19 @@ Source: `knowledge/assistant/VERSION_ROUTING.md`
 
 # Version-aware reasoning
 
-Version scope: advisory; historical runtime observations exact 4.0.3 only.
-Evidence level: original synthesis of curated upstream evidence; no new runtime test.
-Known limitations: no included runtime controller, parser, writer or hardware acceptance.
+Version scope: historical 3.19.3 migration lineage, exact 4.0.1 and 4.0.3 evidence anchors, and advisory routing for other versions.
+Evidence level: original synthesis of retained upstream conclusions; no new runtime test or included runtime controller.
 
-Start with the installed build. Keep common conceptual advice separate from exact observations. Earlier-version success is a hypothesis for another target, not inherited authority.
+Start with the installed version/build and the user's task. Use shared 4.0.x conceptual knowledge before looking for a relevant exact delta; an exact observation does not imply that every other patch differs. Runtime/schema compatibility and writer acceptance still require their own evidence.
 
-Scope: advisory public rewrite. Runtime conclusions refer only to bounded historical upstream evidence, principally exact PEKAT VISION 4.0.3. No runtime tool or hardware validation is included.
+- **3.19.3:** controlled migration lineage informs comparison with a migrated 4.0.1 fixture. It is not a universal migration guarantee or a reason to restore historical database data.
+- **4.0.1:** generated FLOW/Classifier and tested-machine embedded Python/ML observations remain useful in their original scope. Distinguish package presence, import, functional compute, model construction and inference; locally added packages are not clean-install features.
+- **4.0.3:** principal bounded runtime evidence for selected workflow/tool families. Narrow success does not establish arbitrary variants, physical acceptance or another patch's writer support.
+- **Other versions:** continue explanation, design and drafts using explicitly labeled candidate evidence; identify the smallest relevant compatibility check. Missing execution authority need not block advisory work.
+
+Use [KB4](https://pekatvision.atlassian.net/wiki/spaces/KB4/overview?homepageId=1512243624) as the primary official functional documentation route for 4.x, preserving page scope/revision. Documentation, static/offline inspection, runtime observation and execution authority are different claims. A static project comparison does not prove equal timing, accuracy or OK/NOK behavior.
+
+See the [version evidence matrix](https://github.com/CZPavel/PEKAT-Assistant/blob/main/docs/VERSION_MATRIX.md) for concrete retained scopes and the [public capability classes](https://github.com/CZPavel/PEKAT-Assistant/blob/main/docs/PUBLIC_CAPABILITY_GUIDE.md#public-capability-classification) for availability. This public edition supplies advice and publication utilities; it does not distribute a PEKAT or device writer.
 
 
 ---
@@ -629,7 +637,7 @@ Source: `docs/CAPABILITIES.md`
 
 ## Included preview scope
 
-Advisory inspection design, supplied project/FLOW explanation, annotation/dataset review, training evidence interpretation, comparison, modernization planning and integration boundaries. Includes knowledge, a Codex skill and GPT instructions.
+Advisory inspection design, supplied project/FLOW explanation, annotation/dataset review, training evidence interpretation, comparison, modernization planning and integration boundaries. Includes knowledge, a Codex skill, a portable plugin RC and GPT migration guidance.
 
 ## Historical upstream evidence
 
@@ -651,13 +659,13 @@ Version scope: historical upstream exact 4.0.3 where stated. Evidence level: cur
 
 | Capability | Version | Evidence status | Public status | Current limitation |
 |---|---|---|---|---|
-| Vision design | Conceptual | KNOWLEDGE_ONLY | KNOWLEDGE_ONLY | Physical acceptance remains application-specific |
-| Project explanation/comparison | Observed versions | PARTIAL | KNOWLEDGE_ONLY | No parser or runtime equivalence proof |
-| Source/capture/FLOW subsets | Historical 4.0.3 | VERIFIED_NARROW_SUBSET | KNOWLEDGE_ONLY | No controller or writer |
-| Family-specific ML | Historical 4.0.3 | VERIFIED_NARROW_SUBSET | KNOWLEDGE_ONLY | No annotation/training runner; partial family coverage |
-| HTTP/cross-project transfer | Historical 4.0.3 | VERIFIED_NARROW_SUBSET | KNOWLEDGE_ONLY | No sender; general failure/reconnect unknown |
-| External PTool model example | Historical 4.0.3 | VERIFIED_NARROW_SUBSET | KNOWLEDGE_ONLY | One architecture/checkpoint; partial coverage |
-| Hardware bridges | Exact identity required | KNOWLEDGE_ONLY | KNOWLEDGE_ONLY | No transport or physical acceptance |
+| Vision design | Conceptual | KNOWLEDGE_ONLY | PUBLIC_KNOWLEDGE | Physical acceptance remains application-specific |
+| Project explanation/comparison | Observed versions | PARTIAL | PUBLIC_KNOWLEDGE | No parser or runtime equivalence proof |
+| Source/capture/FLOW subsets | Historical 4.0.3 | VERIFIED_NARROW_SUBSET | PUBLIC_KNOWLEDGE | No controller or writer |
+| Family-specific ML | Historical 4.0.3 | VERIFIED_NARROW_SUBSET | PUBLIC_KNOWLEDGE | No annotation/training runner; partial family coverage |
+| HTTP/cross-project transfer | Historical 4.0.3 | VERIFIED_NARROW_SUBSET | PUBLIC_KNOWLEDGE | No sender; general failure/reconnect unknown |
+| External PTool model example | Historical 4.0.3 | VERIFIED_NARROW_SUBSET | PUBLIC_KNOWLEDGE | One architecture/checkpoint; partial coverage |
+| Hardware bridges | Exact identity required | KNOWLEDGE_ONLY | PUBLIC_KNOWLEDGE | No transport or physical acceptance |
 | Active learning/annotation review | Upstream roadmap | PLANNED | PLANNED | No completed workflow |
 | Voice/multimodal/closed loop | Future vision | PLANNED | UNSUPPORTED | Not an included feature |
 | Generic DB/store/event writer | Any | UNSUPPORTED | UNSUPPORTED | Intentionally absent |
@@ -876,3 +884,482 @@ A completed, saved, selected Detector model was observed upstream. No independen
 Image Saver documentation describes all/OK/NG filtering, Context JSON, overlay/heatmap, Local/FTP and naming options. Sequential identity checks support a bounded freshness conclusion only. Pair image and JSON by explicit identity and account for partial writes; concurrency, crash recovery and atomic pairing remain open gaps.
 
 No new native writer capability was promoted by the October mapping. The public edition contains this explanation, references and offline validation tooling; it contains no controller, private Core, raw evidence or hardware operation. Deterministic private routing tests are not a live small-model evaluation. SMALL_MODEL_LIVE_EVAL_NOT_RUN applies unless a separately recorded model run establishes otherwise.
+
+
+---
+
+Source: `docs/PUBLIC_CAPABILITY_GUIDE.md`
+
+# Public PEKAT Assistant — capabilities and practical use
+
+Updated: 2026-11-09. This guide describes the **public knowledge edition**. It is not a statement that a live PEKAT installation or private development runtime is available to the reader.
+
+## Product editions and what is actually available
+
+| Edition | Available to a public user | What it does not imply |
+|---|---|---|
+| This PEKAT Assistant repository | Curated guidance, examples, decision rules, public skill instructions and GPT knowledge package | No included PEKAT runtime controller or automatic project/device operations |
+| Standalone PEKAT Vision Codex skill | Knowledge plus bundled **offline** diagnostic and validation scripts, subject to their version and input constraints | No automatic live edits, model training, camera operation or PLC control |
+| Separately developed Assistant application | Historical and current bounded development evidence for chat, project context, analytical tools and guarded operations | Not part of this repository and **not** a publicly released Windows installer |
+| Future integration | Potential official interfaces, reviewed workflows, additional providers and richer user interaction | No promised release date or implied permission to perform operations |
+
+The public knowledge edition may explain how to use functions available in PEKAT VISION itself without having a programmatic tool that can invoke those functions. A PEKAT product feature, an implemented private tool and a shipped public capability are three separate claims.
+
+## What the Assistant helps you do
+
+| Area | Public use | Expected result |
+|---|---|---|
+| Design an inspection | Clarify the inspected feature, OK/NOK rules, image visibility, optics, light, trigger and minimal proof of concept | Testable inspection concept with assumptions and acceptance checks |
+| Choose vision methods | Compare classical CV, geometry, Detector, Classifier, anomaly detection, surface detection, OCR and combinations | Justified method and dataset approach rather than a default model choice |
+| Design FLOW | Explain sequential and parallel processing, Conditional Gates, image/overlay/result handling and shared state | Human-readable functional hierarchy and version-scoped FLOW proposal |
+| Write Code, Form or PTool | Draft readable, parameterized code and declare inputs, outputs, errors and dependencies | Reviewable script/module proposal with a validation checklist |
+| Understand an existing application | Interpret **user-provided, sanitized** FLOW, configuration, outputs and observations | Explanation of intent, dependencies and probable behavior, with unknowns identified |
+| Improve or compare projects | Compare user-visible behavior and proposed changes; avoid replacing working logic without evidence | Minimal-change plan and required regression checks |
+| Understand datasets and models | Evaluate dataset coverage, class/label quality, model-selection evidence, training history and portability requirements | Data-quality and model-review findings; no invented training success |
+| Troubleshoot | Correlate version, acquisition, selected image, evaluation, logs, model state and output behavior | Ranked hypotheses with a low-risk test and expected observations |
+| Image/result delivery | Explain filename provenance, image coordinates, annotations, overlays, local saving and incomplete deliveries | Consistency and freshness checks rather than unverified delivery claims |
+| Industrial integration | Design bounded REST/SDK, camera, sensor, IO-Link and cross-system workflows | Integration responsibilities, ownership, timeouts and failure states |
+
+All advice is tied to the stated PEKAT version, module or device identity and the evidence actually provided. Observations from 3.19.3, 4.0.1 or 4.0.3 are not automatically universal.
+
+## Six practical user scenarios
+
+### 1. New inspection in a few steps
+**Ask:** "Check whether an assembled part is correctly seated. I have two example images."
+**Assistant route:** define measurable defect and false-reject risk → check image quality and pose variation → compare camera/lighting/trigger options → compare native tools and model families → propose the smallest trial and acceptance set.
+**Deliverable:** inspection concept, likely FLOW, required images and objective success criteria.
+
+### 2. Explain a complex FLOW
+**Ask:** "Why does this evaluation report NOK even though the object was detected?"
+**Route:** use the supplied version and FLOW diagram → distinguish detection from decision logic → verify Gate conditions and result aggregation → separate image pixels, visual overlays and shared values → propose one discriminating test.
+**Deliverable:** cause candidates and a safe diagnostic sequence.
+
+### 3. Draft a Code or PTool module
+**Ask:** "Create a parameterized computation for a measured distance and publish the result."
+**Route:** declare Context/Form inputs, units and frame of reference → use a version-correct entry point → handle missing inputs explicitly → keep result and visualization outputs distinct → provide a small test.
+**Deliverable:** editable code and an implementation checklist, not a claim of successful live deployment.
+
+### 4. Diagnose inconsistent image filenames or outputs
+**Ask:** "A saved image seems to have the previous image's identifier."
+**Route:** identify input source and filename origin → check per-frame freshness and shared-state reuse → inspect save conditions and destination ownership → compare the image with its evidence metadata.
+**Deliverable:** focused tests to separate naming, state-carryover and delivery failures.
+
+### 5. Review Detector, Classifier or OCR results
+**Ask:** "The predicted label appears in the class list but the Gate chose another output."
+**Route:** establish the model family and representation → distinguish a Detector object class from a Classifier winner and other candidates → inspect threshold/ordering and confidence → verify exact-version behavior.
+**Deliverable:** corrected logic or a bounded verification proposal.
+
+### 6. Combine vision and an external measurement
+**Ask:** "Use a distance sensor or line profile in an inspection decision."
+**Route:** identify exact hardware and transport → define measurement time/quality/units → align it with the current frame and coordinate reference → distinguish stale, unknown and failed measurement states → map to a safe OK/NOK/REVIEW decision.
+**Deliverable:** acquisition and data-flow architecture, not unapproved device commands.
+
+## Public capability classification
+
+Use these seven classes consistently. A class describes availability; the evidence class and exact version describe the strength and limits of the claim.
+
+| Class | Meaning and boundary |
+|---|---|
+| `PUBLIC_KNOWLEDGE` | Original advisory explanations, design rules and examples included here. No live operation is implied. |
+| `PUBLIC_OFFLINE_TOOL` | A shipped script for supplied local artifacts, within its stated input/version contract. State which public package actually contains it. |
+| `PUBLIC_EXECUTABLE` | A runnable public entry point actually shipped in the named package, with documented dependencies and invocation. It does not imply a live PEKAT connector. In this repository this includes publication/build/validation utilities, not PEKAT runtime operations. |
+| `PRIVATE_VERIFIED_NOT_DISTRIBUTED` | Historical bounded private verification exists; its controller/runtime is not included here and cannot be invoked from this public edition. |
+| `PARTIAL` | Some required functions or evidence exist, but the complete scenario remains unvalidated. Name the missing part. |
+| `PLANNED` | Intended development with no present implementation/acceptance claim. |
+| `UNSUPPORTED` | No supported public route is established. Missing or conflicting evidence remains unknown; offer useful analysis or preparation without inventing execution. |
+
+A **native PEKAT function** is a separate product fact: a user may operate it in an appropriately licensed PEKAT installation. Its existence does not establish a public Assistant tool, private writer acceptance or project-specific correctness. The [domain guide](https://github.com/CZPavel/PEKAT-Assistant/blob/main/docs/PUBLIC_DOMAIN_GUIDE.md) names native functions separately from the Assistant's role and automation boundary.
+
+"Verified" requires evidence for the exact version and workflow. Static checking, a simulated example, a successful command response and a physical measurement are different verification levels. The [version matrix](https://github.com/CZPavel/PEKAT-Assistant/blob/main/docs/VERSION_MATRIX.md) identifies retained 3.19.3, 4.0.1 and 4.0.3 evidence without distributing its private source artifacts.
+
+## Privacy and safe sharing
+
+Share only sanitized screenshots, example images, FLOW diagrams, code snippets or diagnostic excerpts for which you have permission. Remove customer names, personal data, real production identifiers, credentials, host addresses and any sensitive production configuration. The public edition should describe **observable function and safe usage**, not reproduce private product implementation details or proprietary material.
+
+## Related reading
+
+- [Getting started](https://github.com/CZPavel/PEKAT-Assistant/blob/main/docs/GETTING_STARTED.md)
+- [Capabilities and historical scope](https://github.com/CZPavel/PEKAT-Assistant/blob/main/docs/CAPABILITIES.md)
+- [Extended scenarios](https://github.com/CZPavel/PEKAT-Assistant/blob/main/docs/USER_SCENARIOS_EXTENDED.md)
+- [Evidence and validation](https://github.com/CZPavel/PEKAT-Assistant/blob/main/docs/EVIDENCE_AND_VALIDATION_STATUS.md)
+- [Roadmap](https://github.com/CZPavel/PEKAT-Assistant/blob/main/docs/ROADMAP.md)
+- [Public skill](https://github.com/CZPavel/codex-skill-pekat-vision)
+
+**Independent community project, not affiliated with or officially supported by the PEKAT VISION vendor.**
+For version-scoped engineering notes on image layers, frame identity and delivered files, see [Image, Context, Result and Output](https://github.com/CZPavel/PEKAT-Assistant/blob/main/docs/IMAGE_CONTEXT_OUTPUT_GUIDE.md).
+
+
+---
+
+Source: `docs/PUBLIC_DOMAIN_GUIDE.md`
+
+# Practical domain guide
+
+This guide maps user tasks to usable advice. All domain cards below are `PUBLIC_KNOWLEDGE`; native PEKAT functions require the user's own installation and version check. The public Assistant does not include a PEKAT connector or project/device writer. Historical bounded private capabilities are `PRIVATE_VERIFIED_NOT_DISTRIBUTED`, not executable public tools. See the [seven availability classes](https://github.com/CZPavel/PEKAT-Assistant/blob/main/docs/PUBLIC_CAPABILITY_GUIDE.md#public-capability-classification).
+
+Inputs mean sanitized material the user supplies voluntarily and has permission to share. A path, screenshot or module name alone does not supply the underlying project, data or runtime state. Start from the relevant card and linked topic; do not require a full project export for a small question.
+
+## Inspection design and acquisition
+
+### Inspection concept and vision-method selection
+
+**Purpose/scenario:** detect a missing component or surface defect with measurable miss and false-reject objectives. **Inputs:** representative OK/NG images, defect size, material, pose variation, field of view, motion, cycle time and acceptance criteria.
+
+**Native functions:** candidate preprocessing, geometry, Detector, Classifier, anomaly, supervised surface inspection and OCR; availability and fit require the exact version. **Assistant role:** compare native/classical/ML alternatives, propose optics/light/acquisition and the smallest discriminating trial. **Automation/limits:** a design or illustrative script is reviewable advice; image visibility, physical repeatability, accuracy and cycle time need independent trials. Start with [inspection design](https://github.com/CZPavel/PEKAT-Assistant/blob/main/knowledge/assistant/VISION_DESIGN.md).
+
+### Camera acquisition and triggering
+
+**Purpose/scenario:** acquire one correctly exposed frame per inspected part. **Inputs:** exact camera/interface, lens, exposure, trigger source, motion, image format and ownership of acquisition.
+
+**Native functions:** configured source, capture/live processing and image selection where supported. **Assistant role:** distinguish camera configuration, live feature values, stream state, processing state and saved images; route exact Basler facts to the specialist. **Automation/limits:** no public acquisition controller; no inferred physical frame freshness from a matching filename or HTTP response. One physical camera owner at a time. See [acquisition](https://github.com/CZPavel/PEKAT-Assistant/blob/main/knowledge/assistant/CAMERA_ACQUISITION.md) and [Basler bridge](https://github.com/CZPavel/PEKAT-Assistant/blob/main/knowledge/bridges/BASLER_PEKAT_BRIDGE.md).
+
+## FLOW, code and image meaning
+
+### FLOW, Parallelism and Conditional Gate
+
+**Purpose/scenario:** explain why a detected object still produces NOK, or group checks by component. **Inputs:** version, active topology, module types/settings, intended dependencies and representative results.
+
+**Native functions:** sequential FLOW, Parallelism, Conditional Gate and preprocessing in the installed version. **Assistant role:** trace execution, preserve the user's functional hierarchy, compare sequential/branched alternatives and identify shared inference. **Automation/limits:** proposals do not author live FLOW; module inventory is not execution order, branch exit is not a universal stop, and joining decisions does not prove image/overlay merging. See [FLOW interpretation](https://github.com/CZPavel/PEKAT-Assistant/blob/main/knowledge/assistant/FLOW_AUTHORING.md).
+
+### Code, Context and GlobalData
+
+**Purpose/scenario:** calculate a custom measurement or diagnose a value left over from a previous frame. **Inputs:** source snippet, version, expected frame identity, input/output schema, reset rules and side effects.
+
+**Native functions:** Code execution and its supported Context/shared-state mechanisms. **Assistant role:** declare producer, frame ownership, missing-input behavior, units, coordinates and lifetime; draft or review code. **Automation/limits:** generated code has not run in embedded PEKAT Python; process-lifetime state is not durable storage or evidence of current-frame validity. File, network and hardware effects require separate scope. See [Context/shared state](https://github.com/CZPavel/PEKAT-Assistant/blob/main/knowledge/assistant/CONTEXT_CODE_GLOBALDATA.md).
+
+### Form, PTool and PModule
+
+**Purpose/scenario:** expose technician parameters for a reusable computation. **Inputs:** exact artifact/version, entry point, stable parameter keys, values/defaults, units/ranges, dependencies and example input/output.
+
+**Native functions:** supported Form controls and native import/export for the actual artifact family. **Assistant role:** prepare readable code and a module card stating purpose, FLOW placement, reads, writes, effects and validation status. **Automation/limits:** no public live import/metadata writer; defaults are not proven execution values, and a narrow package round trip does not prove dependency portability. See [PTool/Form](https://github.com/CZPavel/PEKAT-Assistant/blob/main/knowledge/assistant/PTOOL_PMODULE_FORM.md).
+
+### Embedded Python and external models
+
+**Purpose/scenario:** determine whether an external algorithm or pretrained model can run in Code/PTool. **Inputs:** PEKAT build, observed Python/package profile, CPU/GPU, model/license/weights, preprocessing and resource budget.
+
+**Native functions:** embedded Python/Code in the installed runtime; installed dependencies must be established independently. **Assistant role:** propose a CPU reference, explicit dependency checks and bounded evaluation. **Automation/limits:** package presence, import, model construction and real inference are different evidence levels. A tested machine is not a clean installation, and one external-model example does not establish arbitrary-model compatibility. See [runtime profile](https://github.com/CZPavel/PEKAT-Assistant/blob/main/knowledge/assistant/RUNTIME_PYTHON_ML.md) and [external-model example](https://github.com/CZPavel/PEKAT-Assistant/blob/main/knowledge/assistant/EXTERNAL_TORCHVISION_PTOOL_403.md).
+
+### Image, annotations, native Result and Output
+
+**Purpose/scenario:** deliver the right image and result when a branch crops or changes its raster. **Inputs:** source image, transformations, producer/frame identity, result/context artifact, intended overlay basis and destination ownership.
+
+**Native functions:** image display, native results/overlays, local Image Saver and output modules as individually supported. **Assistant role:** trace raster, geometry, native result and custom state separately; define freshness and complete-delivery checks. **Automation/limits:** no public saver/output writer; equal image dimensions do not prove alignment, configuration/ACK does not prove file delivery, and sequential evidence does not prove concurrency. Retention can delete foreign files in owned date folders. See [image/output guide](https://github.com/CZPavel/PEKAT-Assistant/blob/main/docs/IMAGE_CONTEXT_OUTPUT_GUIDE.md).
+
+## Dataset, annotation and model lifecycle
+
+### Detector and annotation
+
+**Purpose/scenario:** locate/count parts and review missing or incorrect boxes. **Inputs:** representative images, class definitions, box geometry/basis, module/model identity and independent validation examples.
+
+**Native functions:** Detector labeling, training, inference and supported Smart Mask assistance. **Assistant role:** distinguish object instances from image-level class predictions, review dataset coverage and draft labeling/QA rules. **Automation/limits:** Smart Mask computation is not persisted annotation; a box is not a segmentation mask. No generic public annotation/model-delete writer is shipped. See [Detector annotation](https://github.com/CZPavel/PEKAT-Assistant/blob/main/knowledge/assistant/DETECTOR_ANNOTATION_403.md).
+
+### Classifier and result interpretation
+
+**Purpose/scenario:** distinguish a correctly assembled input from an incorrect variant. **Inputs:** input domain/source, allowed classes, labels, selected model, predictions/confidence and validation split.
+
+**Native functions:** family-specific labeling/training, class inference and available statistics. **Assistant role:** reason about winner versus other candidates, source/domain consistency, ambiguity and validation leakage. **Automation/limits:** candidate presence does not prove the winning class; current settings do not retroactively redefine a trained model, and TRAIN-inclusive statistics are not independent quality. See [Detector/Classifier/OCR](https://github.com/CZPavel/PEKAT-Assistant/blob/main/knowledge/assistant/DETECTOR_CLASSIFIER_OCR.md).
+
+### Anomaly learning and supervised surface inspection
+
+**Purpose/scenario:** detect an unusual surface or localize a known defect. **Inputs:** representative normal variation, module-specific OK/NG labels or masks, defect definitions, pixel basis and held-out evaluation set.
+
+**Native functions:** anomaly and supervised surface workflows as separate model families. **Assistant role:** choose a family, review label/mask quality and propose threshold/coverage experiments. **Automation/limits:** tags, OK/NG labels and pixel masks are distinct; unlabeled does not mean confirmed normal. No shared generic annotation/training writer or inferred cross-family progress scale. See [anomaly](https://github.com/CZPavel/PEKAT-Assistant/blob/main/knowledge/assistant/ANOMALY_UNSUPERVISED.md) and [supervised masks](https://github.com/CZPavel/PEKAT-Assistant/blob/main/knowledge/assistant/SUPERVISED_MASK_LIFECYCLE.md).
+
+### OCR and text annotation
+
+**Purpose/scenario:** read a marking and compare it with an expected identifier. **Inputs:** image/region, transcription policy, charset/format, orientation, model/version and accepted error criteria.
+
+**Native functions:** supported OCR regions/partitions, annotation, recognition and training. **Assistant role:** separate annotation text, recognized text, confidence and application-level format validation. **Automation/limits:** no public OCR writer; region geometry and transcription have their own contracts. Correct format alone does not prove the text is correct or belongs to the current frame. See [OCR annotation](https://github.com/CZPavel/PEKAT-Assistant/blob/main/knowledge/assistant/OCR_ANNOTATION.md).
+
+### Training history, model selection and portability
+
+**Purpose/scenario:** decide whether a trained model is usable or move data to another project. **Inputs:** family/version, dataset/splits, training terminal state, saved artifact, selected model identity, metrics and source/target export formats.
+
+**Native functions:** family-specific training/status/selection, Image Library transfer, supported Detector COCO and native model-package transfer. **Assistant role:** distinguish command acknowledgement, terminal state, saved weights, selection and independent quality; plan an explicit transfer check. **Automation/limits:** progress 100 or a completed record does not alone prove saved usable weights. Export families are not interchangeable and clean import does not prove equal inference. See [training history](https://github.com/CZPavel/PEKAT-Assistant/blob/main/knowledge/assistant/TRAINING_HISTORY_DIAGNOSTICS.md) and [portability](https://github.com/CZPavel/PEKAT-Assistant/blob/main/knowledge/assistant/DATA_MODEL_PORTABILITY.md).
+
+## Project understanding and operation
+
+### Project explanation, comparison and modernization
+
+**Purpose/scenario:** understand a supplied project, identify a change between versions, or replace custom logic with a native feature. **Inputs:** sanitized snapshots/diagrams, exact builds, active topology, code/settings, known good behavior and intended delta.
+
+**Native functions:** project management and installed native alternatives; the comparison itself is an advisory/offline task. **Assistant role:** separate active modules from recoverable history, match by meaning rather than only IDs, preserve working logic and identify the smallest regression check. **Automation/limits:** this repository includes no project parser/controller; name the separate public offline skill when recommending its scripts. Static similarity proves neither runtime equivalence, timing nor equal OK/NOK behavior. See [project analysis](https://github.com/CZPavel/PEKAT-Assistant/blob/main/knowledge/assistant/PROJECT_ANALYSIS.md), [semantic diff](https://github.com/CZPavel/PEKAT-Assistant/blob/main/knowledge/assistant/SEMANTIC_PROJECT_DIFF.md) and [modernization](https://github.com/CZPavel/PEKAT-Assistant/blob/main/knowledge/assistant/MODERNIZATION_ADVISOR.md).
+
+### Logs, startup and troubleshooting
+
+**Purpose/scenario:** diagnose apparent hangs, initial evaluation or missing results. **Inputs:** version, source/mode, timestamps, sanitized logs/stderr, readiness/model state, last successful action and repeatable symptom.
+
+**Native functions:** project lifecycle/status and runtime logging in the installed version. **Assistant role:** rank hypotheses and propose one low-risk discriminating check; distinguish startup, server-ready, model-ready and actual processing. **Automation/limits:** a restart can trigger evaluation/effects; a native success result can coexist with a Code traceback. Do not classify every initial frame as faulty or call an execution-bearing reader a passive check. See [troubleshooting](https://github.com/CZPavel/PEKAT-Assistant/blob/main/knowledge/assistant/TROUBLESHOOTING.md) and [log diagnosis](https://github.com/CZPavel/PEKAT-Assistant/blob/main/knowledge/assistant/LOG_DIAGNOSTICS.md).
+
+### Projects, Operator and statistics
+
+**Purpose/scenario:** present inspection state to an operator and explain summary counts. **Inputs:** intended operator workflow, layout, data origin/reset rules, project lifecycle and recovery requirements.
+
+**Native functions:** available Operator layout/input, kiosk and statistics facilities; each requires version-specific evidence. **Assistant role:** propose understandable status/UNKNOWN/error handling and distinguish a display from an operator state machine. **Automation/limits:** retained Operator runtime evidence was Input-only; kiosk recovery remained manual. No public UI automation or complete statistics writer is included. See [Operator/statistics](https://github.com/CZPavel/PEKAT-Assistant/blob/main/knowledge/assistant/PROJECTS_OPERATOR_STATISTICS.md).
+
+## Communication and industrial integration
+
+### REST, official SDK, HTTP Output and Cross-PEKAT
+
+**Purpose/scenario:** request inspection externally or forward a result to another system. **Inputs:** exact version/interface documentation, input/result schema, request/frame identity, timeouts, acknowledgement semantics and destination ownership.
+
+**Native functions:** documented REST/SDK interfaces, HTTP Output and supported cross-project mechanisms have separate scopes. **Assistant role:** draft a bounded integration contract, distinguish request acceptance from processing/delivery, and define stale/duplicate/timeout behavior. **Automation/limits:** no public live client/controller is bundled; an SDK release does not establish a generic writer. Happy-path state transfer proves neither reconnect behavior nor atomic image/JSON delivery. See [REST/SDK](https://github.com/CZPavel/PEKAT-Assistant/blob/main/knowledge/assistant/REST_SDK_CROSS_PEKAT.md), [HTTP Output](https://github.com/CZPavel/PEKAT-Assistant/blob/main/knowledge/assistant/HTTP_OUTPUT_403.md) and [Cross-PEKAT](https://github.com/CZPavel/PEKAT-Assistant/blob/main/knowledge/assistant/CROSS_PEKAT_403.md).
+
+### Basler, IFM IO-Link, KEYENCE LJ-X/LJ-S and MX-G2000
+
+**Purpose/scenario:** combine a camera, distance sensor or line profile with vision, or deploy onto an embedded platform. **Inputs:** exact model/family/firmware, interface, units/quality, timing, device ownership, coordinate calibration and PEKAT build.
+
+**Native functions:** only those independently established for the named PEKAT source/transport and exact device. **Assistant role:** route vendor facts to the matching specialist and own PEKAT-side timestamp/frame/measurement composition. **Automation/limits:** specialist knowledge is an independent dependency, not a device writer; LJ-X/LJ-S families are not interchangeable, an installed SDK is not acquisition proof, and platform compatibility is not an industrial acceptance test. See the [hardware bridges](https://github.com/CZPavel/PEKAT-Assistant/blob/main/knowledge/INDEX.md).
+
+## How to finish a useful advisory task
+
+Return a concrete explanation, code draft, inspection design, comparison or integration contract; list the inputs still missing only when they affect its use. Name the exact version and evidence level. State which artifact/tool is actually shipped and the smallest remaining offline, runtime or physical check. Unsupported execution does not block useful preparation. Public publication utilities are `PUBLIC_EXECUTABLE`; new live connectors, new writers and a public Windows installer remain separately reviewed work, not features implied by these cards.
+
+
+---
+
+Source: `docs/IMAGE_CONTEXT_OUTPUT_GUIDE.md`
+
+# Image, Context, Result and Output — practical PEKAT VISION guidance
+
+Public technical note, 2026-11-09. Evidence scope: **bounded PEKAT VISION 4.0.3 observations** and the explicitly stated comparison with 4.0.1; no assertion that every 4.x version or project behaves identically. This page is knowledge for user review, not an automation interface.
+
+## Distinguish four independently meaningful things
+
+1. **Image raster:** the actual pixels available at the current step, which may have been cropped, rescaled, masked or otherwise processed.
+2. **Native recognition and measurement results:** rectangles, classes, OCR, heatmaps, lines and measurements returned by the relevant tools.
+3. **Custom Context/shared values:** information passed between operations or held beyond a single evaluation; it may not have the same lifetime or merge behavior as image data.
+4. **Visualization and persisted output:** what appears as an overlay in the UI, or what is actually saved to disk. Displaying a result and saving it are distinct outcomes.
+
+A rectangle visible over an image is not proof that the rectangle has been drawn into the image pixels. A visually correct preview is not proof of successful file delivery.
+
+## Frame identity, filenames and stale values
+
+For the observed Folder-source recipe, the input filename is available as a filename-only value in Context. Its presence must be checked for the current input, not borrowed from a previous evaluation.
+
+Shared GlobalData values may survive multiple evaluations but reset with project-server restart. Initialize each evaluation's result quality/validity before producers execute, and associate results with a current frame identity. When a producer fails or a branch is skipped, publish **UNKNOWN/INVALID** rather than silently reusing the previous positive result.
+
+For multi-branch FLOW, avoid assuming that merging image pixels also automatically merges or replaces custom values and native results with equivalent rules. Assess each output channel separately.
+
+## Coordinate systems and transformations
+
+Always state the coordinate basis of a result: full original image, current module image, cropped region, scaled image or unknown. A result can have plausible numbers but still refer to the wrong image basis.
+
+For one previously tested **axis-aligned application recipe** with crop origin (ox, oy), crop scale s and independent original-space scale (sx, sy):
+
+- X = (ox + x × s) × sx
+- Y = (oy + y × s) × sy
+- W = w × s × sx
+- H = h × s × sy
+
+This equation is a scoped numerical mapping, **not** a general PEKAT rule for rotated rectangles, every Unifier mode, percentage-based coordinates, heatmaps or camera calibration. Check landmarks and image size against the actual current transform.
+
+A non-destructive annotation conversion should preserve the original detections and associate any derived representation with its source frame and transformation. New geometry does not automatically establish improved physical accuracy.
+
+## Image Saver and delivery correctness
+
+A bounded 4.0.3 configuration/evaluation test established that an active local Saver needs an eligible execution path and an appropriate production-mode state. Observed selection was: **ALL** accepts True/False/None; **OK** accepts True; **NG** accepts False. These are observations for the tested path, not a universal guarantee across modes and versions.
+
+Treat the following as separate checks:
+
+- the relevant output module is reached and enabled;
+- the intended image/overlay and filename basis is selected;
+- the configured destination belongs to the intended producer;
+- the file has actually appeared and can be opened;
+- any accompanying JSON/meta evidence belongs to **the same current frame**, not a previously written image.
+
+For tests, use a unique frame or request marker and check a fresh image plus matching metadata. Separate image and metadata writes are not inherently an atomic pair. A file with a plausible name can still belong to an earlier frame.
+
+**Retention warning:** On the bounded tested configuration, automatic retention could delete **entire old date directories**, including unrelated nested content. Do not enable automatic deletion on a shared/customer directory without first isolating its root and testing the exact settings. Configuration rollback cannot restore files already deleted by a completed cleanup.
+
+## Safe result policy
+
+For a composite inspection, retain a confirmed NOK even if another required check is UNKNOWN. Confirm overall OK only when all required checks are OK, expected instances are covered and observations refer to the current item/frame. Otherwise emit REVIEW/UNKNOWN, while keeping communication and acquisition errors separately visible.
+
+## Suggested acceptance checks
+
+1. Reprocess two distinct, identifiable frames sequentially; verify that labels, images and result metadata do not cross over.
+2. Test missing or skipped producers; verify no previous positive value leaks into the next result.
+3. Use a visible landmark to verify crop/scale output coordinates.
+4. Compare visible overlays with the saved raster; do not presume they are the same.
+5. Verify the real delivery path with a unique marker, not only the configured Saver state.
+6. If cleanup is used, test it exclusively in an isolated disposable directory.
+
+This note does not claim production concurrency, camera metrological accuracy, rotated-geometry compatibility, general hardware acceptance or a publicly distributed Image Saver controller.
+
+See [practical runtime rules](https://github.com/CZPavel/PEKAT-Assistant/blob/main/docs/PRACTICAL_RUNTIME_RULES.md), [capabilities](https://github.com/CZPavel/PEKAT-Assistant/blob/main/docs/CAPABILITIES.md) and [public usage guide](https://github.com/CZPavel/PEKAT-Assistant/blob/main/docs/PUBLIC_CAPABILITY_GUIDE.md).
+
+
+---
+
+Source: `docs/PRACTICAL_RUNTIME_RULES.md`
+
+# Practical PEKAT runtime rules
+
+Status: sanitized public engineering conclusions.
+Primary historical runtime scope: PEKAT VISION 4.0.3 unless a narrower note says otherwise.
+These rules do not expose or authorize private transport mechanisms.
+
+## FLOW topology and lifecycle
+
+A project registry and the executed FLOW are different representations. Explain recursive execution topology first. A module that exists in project storage may be inactive, retained history, recoverable state or otherwise outside active execution. Do not classify it as active merely because it exists, and do not recommend deletion from inventory alone.
+
+A static project representation is suitable for explanation and comparison, but it is not a writer contract.
+
+## Image, native results and custom state
+
+Treat these as separate layers:
+
+1. image raster/pixels;
+2. PEKAT-native detections, measurements, heatmaps or result objects;
+3. custom Context and shared process state.
+
+An image operation can change pixels without erasing all native result semantics. Conversely, removing or replacing result structures is not the same as editing the image.
+
+In parallel FLOWs, an unchanged branch can preserve an earlier raster while other branches produce native results. Do not assume that all branch outputs merge identically.
+
+## Branch exit
+
+Historical runtime evidence shows branch-local exit behavior. Therefore do not explain an exit flag as universally terminating the entire FLOW unless exact-version topology and runtime evidence establish that wider behavior.
+
+## GlobalData and persistent state
+
+GlobalData is shared process-lifetime state and resets when the relevant project server restarts. It is not durable database history.
+
+Every shared value used for production decisions should have a producer, owner, item/product identity where relevant, freshness or timestamp semantics, reset behavior and invalid/stale handling.
+
+A valid value from a previous item must not silently decide the next item.
+
+Historical PEKAT Code can also use persistent Python/module state. Presence of persistent state is not automatically a defect. Treat it first as a dependency that needs ownership and reset analysis.
+
+## Detector versus Classifier
+
+Detector answers object/location questions. Classifier answers class/state questions about an inspected input. Do not treat a Classifier candidate list as detected object instances.
+
+Historical PEKAT observations show that candidate class lists can contain more than the eventual winner. Therefore routing must identify the winner according to the exact family/version contract; testing whether a label appears anywhere in the candidate list is unsafe.
+
+## Annotation representations
+
+Keep these distinct: Smart Mask or segmentation suggestion, accepted segmentation mask, bounding box, persisted Detector rectangle and OCR region/partition information.
+
+Conversion between representations is a deliberate operation with geometry/raster assumptions. A suggestion is not persistence.
+
+## Training and model lifecycle
+
+Training start acknowledgement, progress and terminal UI text are separate from durable artifact creation.
+
+A defensible training conclusion should establish as much as the family supports: run/model identity, terminal state, artifact presence, active model binding/selection and relevant dataset/annotation provenance.
+
+Do not generalize one family's lifecycle to Detector, Classifier, OCR, Anomaly and Supervised interchangeably.
+
+## PTool, Form and Python
+
+A Form control key, displayed default, serialized value and runtime value are separate concepts. Validate types and actual execution values.
+
+Portable PTool/package artifacts do not automatically include external Python packages, ABI compatibility, model weights or device dependencies.
+
+## REST, outputs and communication
+
+Separate process/project reachability, provider/source readiness, image transport, inference, result semantics and outbound delivery.
+
+A successful connection or HTTP response does not prove that the intended image was evaluated by the intended model.
+
+Distributed/shared-state integrations need identity, freshness, timeout, duplicate and restart semantics.
+
+## Version boundary
+
+Version similarity is evidence for investigation, not writer authority.
+
+A behavior observed on 4.0.1 may inform a 4.0.3 hypothesis. It does not prove a 4.0.3 writer or runtime contract. Future PEKAT versions should be treated as fresh version intake until bounded evidence exists.
+
+## Current capability and knowledge boundaries — 2026-10-23
+
+Use the [current decision-guide addendum](https://github.com/CZPavel/PEKAT-Assistant/blob/main/knowledge/assistant/DECISION_GUIDE_403.md) for ID-specific Detector edits, Brightness/Contrast, OCR authoring and accepted Gate variants. Dated negative observations remain historical evidence. Supersession applies only to the matching exact-version contract and evidence scope; retain do_not_repeat and disclose cycles/conflicts. Workflow-first intent selection remains read-only and cannot authorize execution. Public main, released artifacts and hosted GPT knowledge are separate states; local generation does not update a hosted assistant.
+
+
+---
+
+Source: `docs/EVIDENCE_AND_VALIDATION_STATUS.md`
+
+# Evidence and validation status
+
+This document answers a different question from the capability list: what kind of evidence supports a public statement?
+
+Public edition functionality is advisory. Historical upstream implementation is listed only to show which conclusions came from bounded runtime work rather than feature speculation.
+
+| Area | Version scope | Evidence class | Public conclusion |
+|---|---|---|---|
+| Exact-version boundary | general policy | VERIFIED_POLICY | Evidence from one patch does not authorize another patch |
+| Project/FLOW topology | historical 4.0.3 | STATIC + OFFLINE + bounded runtime context | Registry membership and active execution are separate |
+| Context/GlobalData | historical 4.0.3; retained older context | BOUNDED_RUNTIME | Shared process state needs ownership, reset and freshness |
+| Branch-local exit | historical tested scope | BOUNDED_RUNTIME | Do not generalize exit to whole FLOW |
+| Parallel image/result reasoning | historical tested scope | BOUNDED_RUNTIME + curated synthesis | Pixels, native results and custom state are separate layers |
+| Camera lifecycle/capture | historical 4.0.3 | VERIFIED_NARROW_SUBSET | Narrow capture/control existed upstream; no public controller |
+| Conditional Gate subset | historical 4.0.3 | VERIFIED_NARROW_SUBSET | Narrow boolean gating existed upstream; not arbitrary gate authoring |
+| FLOW native tool subsets | historical 4.0.3 | VERIFIED_NARROW_SUBSET | Selected tool subsets existed upstream |
+| Detector annotation | historical 4.0.3 | VERIFIED_NARROW_SUBSET | Additive/first-create semantics were family-specific |
+| Smart Mask | historical 4.0.3 | READ_ONLY_COMPUTE + bounded composition | Suggestion is not persistence; bbox conversion is explicit |
+| Classifier routing | retained observed/runtime semantics | BOUNDED_RUNTIME | Candidate presence is not a safe winner test |
+| Family-specific ML lifecycle | historical 4.0.3 | VERIFIED_NARROW_SUBSET | Identity/status/artifact/selection are family-specific |
+| PTool/Form | historical 4.0.3 | ROUND_TRIP_NARROW | Round trip does not prove arbitrary dependency portability |
+| HTTP Output | historical 4.0.3 | VERIFIED_NARROW_SUBSET | Narrow delivery existed; retries/order/general transports remain separate |
+| Cross-project state | historical 4.0.3 | VERIFIED_NARROW_SUBSET | Happy-path transfer does not establish reconnect semantics |
+| Project forensics/diff | historical upstream | OFFLINE_VERIFIED | Static explanation/comparison does not prove runtime equivalence |
+| Generic project DB/store writer | any | INTENTIONALLY_UNSUPPORTED | Read representations must not be promoted into a generic writer |
+| Hardware bridges | exact device required | KNOWLEDGE_ONLY unless specialist says otherwise | PEKAT-side composition does not prove device acceptance |
+
+## Evidence vocabulary
+
+- OFFICIAL_DOCUMENTATION: vendor-described behavior in stated scope.
+- STATIC: structure, schema or source/configuration evidence.
+- OFFLINE_VERIFIED: deterministic fixture/parser/semantic validation.
+- BOUNDED_RUNTIME: exact target/version runtime observation.
+- VERIFIED_NARROW_SUBSET: implemented and verified, but only for explicitly bounded variants.
+- READ_ONLY_COMPUTE: computation/read path with no persistence authority.
+- USER_OBSERVED: useful observation supplied by a user, not independently reproduced here.
+- KNOWLEDGE_ONLY: advisory reasoning with no executable public tool.
+- UNKNOWN: missing or contradictory evidence.
+
+## What public tests prove
+
+Repository tests prove packaging, sanitization, reference integrity and benchmark schema. They do not prove PEKAT runtime behavior.
+
+See [Validation](https://github.com/CZPavel/PEKAT-Assistant/blob/main/docs/VALIDATION.md).
+
+## October evidence boundary
+
+The [decision guide](https://github.com/CZPavel/PEKAT-Assistant/blob/main/knowledge/assistant/DECISION_GUIDE_403.md) separates current official 4.x descriptions, sanitized exact-4.0.3 upstream observations, offline axis-aligned recipes and open contracts. Sequential freshness is not concurrency or atomic JPEG/JSON proof; saved/selected model is not independently validated quality. SMALL_MODEL_LIVE_EVAL_NOT_RUN: public offline gates do not evaluate a language model.
+
+## Historical version anchors in this public consolidation
+
+The [version matrix](https://github.com/CZPavel/PEKAT-Assistant/blob/main/docs/VERSION_MATRIX.md) distinguishes controlled 3.19.3 migration lineage, exact-4.0.1 generated-FLOW/Classifier and tested-machine Python/ML observations, and bounded exact-4.0.3 tool/workflow evidence. These are retained upstream conclusions, not new tests. Public sources remain sanitized rewrites; raw historical projects, database/transport details and third-party manuals are not distributed.
+
+Availability uses the [seven public classes](https://github.com/CZPavel/PEKAT-Assistant/blob/main/docs/PUBLIC_CAPABILITY_GUIDE.md#public-capability-classification). PUBLIC_EXECUTABLE applies to actually shipped runnable entry points such as publication utilities; it does not convert a native PEKAT function or historical private controller into a public live operation. Unknown or conflicting evidence stays explicit even when a route is classified UNSUPPORTED.
+
+
+---
+
+Source: `docs/VERSION_MATRIX.md`
+
+# Version evidence matrix
+
+This is an evidence map, not a support certification. No PEKAT runtime test was performed for this public consolidation. Retained upstream conclusions are summarized without raw private captures, database schemas or transport contracts.
+
+| Exact version | Retained evidence and practical use | What it does not establish |
+|---|---|---|
+| 3.19.3 | A controlled pre-upgrade fixture supports historical project lineage and read-only comparison against its migrated 4.0.1 state. In that fixture, the pre-upgrade snapshot and retained old snapshot matched, and active execution topology was preserved through migration. | Universal upgrade safety, current runtime semantics, a public migration tool, or permission to restore old database data into a current project. |
+| 4.0.1 | Retained generated-FLOW/Classifier runtime recipe and tested-machine Code/Python/ML observations support version-specific explanation. Selected CPU/GPU calculations and library functions were exercised; some model libraries were tested only for construction. | A clean-install dependency list, arbitrary-model inference, camera/PLC communication, or writer acceptance for 4.0.3. Locally added packages must remain identified as additions. |
+| 4.0.3 | Principal bounded upstream runtime target: selected FLOW/Gate/native-tool, Context/image/result, family-specific annotation/model, PTool/Form, output and acquisition subsets. Public topics preserve the limits of those conclusions. | A complete feature matrix, universal join/image semantics, arbitrary authoring, physical timing/accuracy, concurrent freshness, or an included public controller. |
+| Other/future versions | Common design concepts can guide analysis; explicitly label nearby-version evidence as a candidate and identify the relevant compatibility check. | Automatic runtime equivalence, schema equivalence, bundled dependency compatibility or inherited writer authority. |
+
+## Common concepts and exact contracts
+
+4.0.1 and 4.0.3 are evidence anchors within the 4.0.x maintenance family. They do not by themselves prove different schemas or incompatible behavior. Reuse common functional knowledge where appropriate, then overlay a known relevant delta or mark the exact behavior unverified. Avoid both inventing differences and assuming equivalence.
+
+For official 4.x function descriptions start with [PEKAT Knowledge Base 4.0](https://pekatvision.atlassian.net/wiki/spaces/KB4/overview?homepageId=1512243624). A published page is documentation evidence for its stated scope/revision, not an exact-4.0.3 runtime test. KB3 is historical/supplementary for older-version questions. If documentation conflicts with a reproducible exact-version observation, state the conflict and scope instead of silently merging the claims.
+
+For each concrete answer record the installed version/build, source of the claim, evidence level, relevant input/workflow and remaining uncertainty. Common read/design knowledge and exact execution acceptance are separate. Internal database formats and frontend transports are not public APIs; static access does not establish a writer.
+
+## Availability is separate from evidence
+
+All PEKAT-domain execution authority in this public knowledge edition is absent, including where upstream evidence was bounded and successful. Classify retained private operations as `PRIVATE_VERIFIED_NOT_DISTRIBUTED`, and explanations as `PUBLIC_KNOWLEDGE`. A separately shipped offline script is `PUBLIC_OFFLINE_TOOL` only in the package that actually includes it. See the [seven classes](https://github.com/CZPavel/PEKAT-Assistant/blob/main/docs/PUBLIC_CAPABILITY_GUIDE.md#public-capability-classification) and [evidence model](https://github.com/CZPavel/PEKAT-Assistant/blob/main/docs/EVIDENCE_MODEL.md).

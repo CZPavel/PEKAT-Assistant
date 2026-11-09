@@ -37,6 +37,12 @@ knowledge_sources:
 - docs/USER_SCENARIOS.md
 - docs/SPECIALIST_SKILLS.md
 - knowledge/assistant/DECISION_GUIDE_403.md
+- docs/PUBLIC_CAPABILITY_GUIDE.md
+- docs/PUBLIC_DOMAIN_GUIDE.md
+- docs/IMAGE_CONTEXT_OUTPUT_GUIDE.md
+- docs/PRACTICAL_RUNTIME_RULES.md
+- docs/EVIDENCE_AND_VALIDATION_STATUS.md
+- docs/VERSION_MATRIX.md
 schema: pekat-public-package/2
 validation:
   public_github_repositories:

@@ -41,6 +41,7 @@ schema: pekat-public-package/2
 validation:
   public_github_repositories:
   - CZPavel/PEKAT-Assistant
+  - CZPavel/codex-skill-pekat-vision
   - CZPavel/codex-skill-basler-cameras
   - CZPavel/codex-skill-ifm-io-link
   - CZPavel/keyence-ljx-s-skill

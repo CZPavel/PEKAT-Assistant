@@ -33,3 +33,8 @@ Follow [GPT setup](../gpt/README.md). Use the builder instructions plus the gene
 - Review this training history without assuming that progress 100 means a usable model.
 
 See [Advisory workflow example](../examples/advisory-workflow.md) and the [public behavior benchmark](../benchmarks/assistant_behavior_v0_2.yaml).
+
+
+## Start with a real task
+
+For a task-oriented introduction, see [Public capability and practical use guide](PUBLIC_CAPABILITY_GUIDE.md). It includes six examples covering inspection design, FLOW reasoning, Code/PTool drafting, output filenames, ML results and external sensor integration. Public guidance does not imply that the separately developed application or its live control tools are installed.

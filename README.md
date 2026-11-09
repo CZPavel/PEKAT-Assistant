@@ -90,3 +90,10 @@ A future official PEKAT MCP can fit as a transport/adapter over the same boundar
 ## October update
 
 [Ten practical intent routes](knowledge/assistant/DECISION_GUIDE_403.md) cover Czech/English requests, frame freshness, image channels, crop coordinates and unsupported writer variants. This remains an advisory edition.
+
+
+## November 2026 public capability guide
+
+[Public capability and practical use guide](docs/PUBLIC_CAPABILITY_GUIDE.md) explains the user-visible purpose of the Assistant, six complete example scenarios, what is **actually shipped**, and how that differs from the separately developed private Core and planned Windows application. The [updated roadmap](docs/ROADMAP.md) distinguishes public knowledge, offline tooling, authorized integrations and the separate Windows release path.
+
+This knowledge preview is not a live PEKAT connection. For independently shipped offline scripts use the [public PEKAT Vision skill](https://github.com/CZPavel/codex-skill-pekat-vision).

@@ -87,3 +87,4 @@ Share only sanitized screenshots, example images, FLOW diagrams, code snippets o
 - [Public skill](https://github.com/CZPavel/codex-skill-pekat-vision)
 
 **Independent community project, not affiliated with or officially supported by the PEKAT VISION vendor.**
+For version-scoped engineering notes on image layers, frame identity and delivered files, see [Image, Context, Result and Output](IMAGE_CONTEXT_OUTPUT_GUIDE.md).

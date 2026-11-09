@@ -169,6 +169,7 @@ class PublicGates(unittest.TestCase):
         self.assertIn("v-test", (out / "VALIDATION.md").read_text(encoding="utf-8"))
         with zipfile.ZipFile(out / "pekat-assistant-plugin-v-test.zip") as archive:
             self.assertIn("plugin.json", archive.namelist())
+            self.assertEqual(archive.read("LICENSE"), (ROOT / "LICENSE").read_bytes())
             self.assertIn("skills/pekat-assistant/SKILL.md", archive.namelist())
             for name in archive.namelist():
                 if name.endswith(".md"):

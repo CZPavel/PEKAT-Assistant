@@ -21,6 +21,7 @@ REQUIRED = [
     ".agents/plugins/marketplace.json", "plugins/pekat-assistant/plugin.json",
     "plugins/pekat-assistant/skills/pekat-assistant/SKILL.md",
     "plugins/pekat-assistant/README.md", "scripts/build_plugin.py",
+    "plugins/pekat-assistant/LICENSE",
     "README.md", "LICENSE", "DISCLAIMER.md", "SECURITY.md", "CONTRIBUTING.md",
     "THIRD_PARTY_NOTICES.md", "CHANGELOG.md", "knowledge/INDEX.md",
     "docs/ARCHITECTURE.md", "docs/GETTING_STARTED.md", "docs/USER_SCENARIOS.md",
@@ -36,7 +37,7 @@ REQUIRED = [
     "requirements-dev.txt", "public-package.yaml"
 ]
 EXTENSIONS = {".md", ".yaml", ".yml", ".json", ".py", ".txt"}
-SPECIAL_FILES = {"LICENSE", ".gitignore", ".gitattributes"}
+SPECIAL_FILES = {"LICENSE", ".gitignore", ".gitattributes", "plugins/pekat-assistant/LICENSE"}
 PATTERNS = {
     "absolute Windows path": r"(?i)\b[A-Z]:[\\/]",
     "absolute Unix identity path": r"/(?:home|Users|mnt|opt|var)/[A-Za-z0-9_]",

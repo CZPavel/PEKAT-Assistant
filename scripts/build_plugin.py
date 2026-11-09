@@ -14,8 +14,10 @@ SCHEMA = "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json"
 
 
 def expected_references(root: Path) -> dict[str, bytes]:
-    return {REFS + name[len(SKILL):]: data for name, data in expected_packages(root).items()
-            if name.startswith(SKILL + "/")}
+    outputs = {REFS + name[len(SKILL):]: data for name, data in expected_packages(root).items()
+               if name.startswith(SKILL + "/")}
+    outputs[PLUGIN + "/LICENSE"] = safe_path(root, "LICENSE").read_bytes()
+    return outputs
 
 
 def build(root: Path = ROOT, check: bool = False) -> list[str]:

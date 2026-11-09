@@ -2,6 +2,8 @@
 
 ## Unreleased — public plugin foundation, 2026-11-09
 
+- Include the repository license in the standalone generated plugin and release ZIP.
+
 - Added a portable, skills-only PEKAT Assistant release candidate with generated public references and representative acceptance prompts.
 - Consolidated practical domain workflows and the seven public capability classes while preserving exact-version evidence.
 - Added a Custom GPT migration map, account checklist and verified availability caveats.

@@ -42,3 +42,8 @@ Version scope: historical upstream exact 4.0.3 where stated. Evidence level: cur
 ## FLOW design advice
 
 The public knowledge explains user-guided functional grouping, native-first topology alternatives, shared inference and separate image/result/overlay lineage. It offers synthetic examples and reasoning guidance. Private offline candidate-validation implementation is not shipped here; no public automated validator, runtime acceptance or FLOW writer is implied. See [FLOW guidance](../knowledge/assistant/FLOW_AUTHORING.md).
+
+
+## Current public usage — November 2026
+
+For the current task-oriented public description, including practical examples, shipped-versus-development scope and privacy rules, use [Public capability and practical use guide](PUBLIC_CAPABILITY_GUIDE.md). The tables above preserve dated upstream evidence and must not be mistaken for publicly shipped executable operations. The [roadmap](ROADMAP.md) is a direction, not a release promise.

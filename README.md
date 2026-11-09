@@ -9,12 +9,15 @@ Start here:
 - [Getting started](docs/GETTING_STARTED.md)
 - [Practical runtime rules](docs/PRACTICAL_RUNTIME_RULES.md)
 - [Capabilities](docs/CAPABILITIES.md)
+- [Practical domain guide](docs/PUBLIC_DOMAIN_GUIDE.md)
 - [Evidence and validation status](docs/EVIDENCE_AND_VALIDATION_STATUS.md)
 - [Extended user scenarios](docs/USER_SCENARIOS_EXTENDED.md)
 - [Version matrix](docs/VERSION_MATRIX.md)
 - [Validation model](docs/VALIDATION.md)
 - [Knowledge index](knowledge/INDEX.md)
 - [Standalone Codex skill](.github/skills/pekat-assistant/SKILL.md)
+- [Portable PEKAT Assistant plugin](plugins/pekat-assistant/README.md)
+- [Custom GPT migration checklist](docs/GPT_PLUGIN_MIGRATION.md)
 - [Custom GPT guidance](gpt/README.md)
 - [Publication model](docs/PUBLICATION_MODEL.md)
 
@@ -69,7 +72,7 @@ They are independent dependencies; PEKAT Assistant owns only the PEKAT-side comp
 
 Public CI checks structure, syntax, links, forbidden evidence families, secrets/credentials, local paths, private repository references, generated package drift and the behavior-benchmark schema.
 
-Release packaging creates standalone skill and GPT archives, checksums and a validation note. Release packages pin repository links to the release ref rather than relying on mutable main.
+Release packaging creates standalone skill, GPT and portable plugin archives, checksums and a validation note. Release packages pin repository links to the release ref rather than relying on mutable main. The plugin is a release candidate with host acceptance pending; an official directory listing and Free-account availability are not established.
 
 See [Validation](docs/VALIDATION.md).
 
@@ -90,3 +93,13 @@ A future official PEKAT MCP can fit as a transport/adapter over the same boundar
 ## October update
 
 [Ten practical intent routes](knowledge/assistant/DECISION_GUIDE_403.md) cover Czech/English requests, frame freshness, image channels, crop coordinates and unsupported writer variants. This remains an advisory edition.
+
+
+## November 2026 public capability guide
+
+[Public capability and practical use guide](docs/PUBLIC_CAPABILITY_GUIDE.md) explains the user-visible purpose of the Assistant, six complete example scenarios, what is **actually shipped**, and how that differs from the separately developed private Core and planned Windows application. The [updated roadmap](docs/ROADMAP.md) distinguishes public knowledge, offline tooling, authorized integrations and the separate Windows release path.
+
+This knowledge preview is not a live PEKAT connection. For independently shipped offline scripts use the [public PEKAT Vision skill](https://github.com/CZPavel/codex-skill-pekat-vision).
+[Image, Context, Result and Output guidance](docs/IMAGE_CONTEXT_OUTPUT_GUIDE.md) documents frame freshness, image layers, coordinate bases and verified output delivery.
+
+The [domain guide](docs/PUBLIC_DOMAIN_GUIDE.md) maps inspection tasks to required inputs, native PEKAT functions, the public Assistant role and concrete automation limits. Availability uses the [seven public capability classes](docs/PUBLIC_CAPABILITY_GUIDE.md#public-capability-classification).

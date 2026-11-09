@@ -1,5 +1,13 @@
 # Changelog
 
+## Unreleased — public plugin foundation, 2026-11-09
+
+- Added a portable, skills-only PEKAT Assistant release candidate with generated public references and representative acceptance prompts.
+- Consolidated practical domain workflows and the seven public capability classes while preserving exact-version evidence.
+- Added a Custom GPT migration map, account checklist and verified availability caveats.
+- Extended existing package, privacy and drift gates to cover the plugin and its ref-pinned release ZIP. Host installation and model-answer acceptance remain pending.
+- Preserved the separate PEKAT Vision skill's existing public offline tools; no private Core or PEKAT/device controller is distributed.
+
 ## Unreleased — ecosystem reconciliation 2026-10-23
 
 - Added scoped Detector, Brightness/Contrast, OCR and Gate advisory updates, workflow-first selection and supersession boundaries. Preserved historical observations and public-only authority.

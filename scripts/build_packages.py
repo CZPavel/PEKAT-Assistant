@@ -115,6 +115,9 @@ def build(root: Path = ROOT, check: bool = False) -> list[str]:
             if not check:
                 path.parent.mkdir(parents=True, exist_ok=True)
                 path.write_bytes(data)
+    # Both portable forms derive from the same maintained public sources.
+    from build_plugin import build as build_plugin
+    drift.extend(build_plugin(root, check=check))
     return drift
 
 

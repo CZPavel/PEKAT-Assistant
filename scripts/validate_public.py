@@ -18,6 +18,9 @@ import yaml
 from build_packages import ROOT, EXCLUDED_PARTS, build, files
 
 REQUIRED = [
+    ".agents/plugins/marketplace.json", "plugins/pekat-assistant/plugin.json",
+    "plugins/pekat-assistant/skills/pekat-assistant/SKILL.md",
+    "plugins/pekat-assistant/README.md", "scripts/build_plugin.py",
     "README.md", "LICENSE", "DISCLAIMER.md", "SECURITY.md", "CONTRIBUTING.md",
     "THIRD_PARTY_NOTICES.md", "CHANGELOG.md", "knowledge/INDEX.md",
     "docs/ARCHITECTURE.md", "docs/GETTING_STARTED.md", "docs/USER_SCENARIOS.md",
@@ -211,6 +214,8 @@ def validate(root: Path = ROOT, check_index: bool = False) -> list[str]:
             errors.append(rel + ": invalid syntax/text: " + str(exc))
 
     errors.extend(benchmark_issues(root))
+    from build_plugin import validate as validate_plugin
+    errors.extend("plugin: " + issue for issue in validate_plugin(root))
     try:
         errors.extend("generated drift: " + name for name in build(root, check=True))
     except (ValueError, KeyError, OSError, yaml.YAMLError) as exc:

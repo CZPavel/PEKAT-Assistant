@@ -2,7 +2,7 @@
 
 ## Included preview scope
 
-Advisory inspection design, supplied project/FLOW explanation, annotation/dataset review, training evidence interpretation, comparison, modernization planning and integration boundaries. Includes knowledge, a Codex skill and GPT instructions.
+Advisory inspection design, supplied project/FLOW explanation, annotation/dataset review, training evidence interpretation, comparison, modernization planning and integration boundaries. Includes knowledge, a Codex skill, a portable plugin RC and GPT migration guidance.
 
 ## Historical upstream evidence
 
@@ -24,13 +24,13 @@ Version scope: historical upstream exact 4.0.3 where stated. Evidence level: cur
 
 | Capability | Version | Evidence status | Public status | Current limitation |
 |---|---|---|---|---|
-| Vision design | Conceptual | KNOWLEDGE_ONLY | KNOWLEDGE_ONLY | Physical acceptance remains application-specific |
-| Project explanation/comparison | Observed versions | PARTIAL | KNOWLEDGE_ONLY | No parser or runtime equivalence proof |
-| Source/capture/FLOW subsets | Historical 4.0.3 | VERIFIED_NARROW_SUBSET | KNOWLEDGE_ONLY | No controller or writer |
-| Family-specific ML | Historical 4.0.3 | VERIFIED_NARROW_SUBSET | KNOWLEDGE_ONLY | No annotation/training runner; partial family coverage |
-| HTTP/cross-project transfer | Historical 4.0.3 | VERIFIED_NARROW_SUBSET | KNOWLEDGE_ONLY | No sender; general failure/reconnect unknown |
-| External PTool model example | Historical 4.0.3 | VERIFIED_NARROW_SUBSET | KNOWLEDGE_ONLY | One architecture/checkpoint; partial coverage |
-| Hardware bridges | Exact identity required | KNOWLEDGE_ONLY | KNOWLEDGE_ONLY | No transport or physical acceptance |
+| Vision design | Conceptual | KNOWLEDGE_ONLY | PUBLIC_KNOWLEDGE | Physical acceptance remains application-specific |
+| Project explanation/comparison | Observed versions | PARTIAL | PUBLIC_KNOWLEDGE | No parser or runtime equivalence proof |
+| Source/capture/FLOW subsets | Historical 4.0.3 | VERIFIED_NARROW_SUBSET | PUBLIC_KNOWLEDGE | No controller or writer |
+| Family-specific ML | Historical 4.0.3 | VERIFIED_NARROW_SUBSET | PUBLIC_KNOWLEDGE | No annotation/training runner; partial family coverage |
+| HTTP/cross-project transfer | Historical 4.0.3 | VERIFIED_NARROW_SUBSET | PUBLIC_KNOWLEDGE | No sender; general failure/reconnect unknown |
+| External PTool model example | Historical 4.0.3 | VERIFIED_NARROW_SUBSET | PUBLIC_KNOWLEDGE | One architecture/checkpoint; partial coverage |
+| Hardware bridges | Exact identity required | KNOWLEDGE_ONLY | PUBLIC_KNOWLEDGE | No transport or physical acceptance |
 | Active learning/annotation review | Upstream roadmap | PLANNED | PLANNED | No completed workflow |
 | Voice/multimodal/closed loop | Future vision | PLANNED | UNSUPPORTED | Not an included feature |
 | Generic DB/store/event writer | Any | UNSUPPORTED | UNSUPPORTED | Intentionally absent |

@@ -46,3 +46,9 @@ See [Validation](VALIDATION.md).
 ## October evidence boundary
 
 The [decision guide](../knowledge/assistant/DECISION_GUIDE_403.md) separates current official 4.x descriptions, sanitized exact-4.0.3 upstream observations, offline axis-aligned recipes and open contracts. Sequential freshness is not concurrency or atomic JPEG/JSON proof; saved/selected model is not independently validated quality. SMALL_MODEL_LIVE_EVAL_NOT_RUN: public offline gates do not evaluate a language model.
+
+## Historical version anchors in this public consolidation
+
+The [version matrix](VERSION_MATRIX.md) distinguishes controlled 3.19.3 migration lineage, exact-4.0.1 generated-FLOW/Classifier and tested-machine Python/ML observations, and bounded exact-4.0.3 tool/workflow evidence. These are retained upstream conclusions, not new tests. Public sources remain sanitized rewrites; raw historical projects, database/transport details and third-party manuals are not distributed.
+
+Availability uses the [seven public classes](PUBLIC_CAPABILITY_GUIDE.md#public-capability-classification). PUBLIC_EXECUTABLE applies to actually shipped runnable entry points such as publication utilities; it does not convert a native PEKAT function or historical private controller into a public live operation. Unknown or conflicting evidence stays explicit even when a route is classified UNSUPPORTED.

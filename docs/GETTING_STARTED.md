@@ -23,6 +23,10 @@ The public skill does not connect to PEKAT or equipment.
 
 Follow [GPT setup](../gpt/README.md). Use the builder instructions plus the generated public knowledge. Review data handling before uploading private project information.
 
+## Portable plugin
+
+Follow the [plugin installation and test guide](../plugins/pekat-assistant/README.md). It uses the same curated public knowledge and needs no private Core for ordinary questions. Repository packaging is validated; host installation and answer-quality acceptance remain pending. Existing GPT owners should use the [migration checklist](GPT_PLUGIN_MIGRATION.md) before changing their published account configuration.
+
 ## Useful first prompts
 
 - Explain this sanitized FLOW and separate active execution from retained module inventory.
@@ -33,3 +37,8 @@ Follow [GPT setup](../gpt/README.md). Use the builder instructions plus the gene
 - Review this training history without assuming that progress 100 means a usable model.
 
 See [Advisory workflow example](../examples/advisory-workflow.md) and the [public behavior benchmark](../benchmarks/assistant_behavior_v0_2.yaml).
+
+
+## Start with a real task
+
+For a task-oriented introduction, see [Public capability and practical use guide](PUBLIC_CAPABILITY_GUIDE.md). It includes six examples covering inspection design, FLOW reasoning, Code/PTool drafting, output filenames, ML results and external sensor integration. Public guidance does not imply that the separately developed application or its live control tools are installed.
